@@ -1,104 +1,343 @@
-/* style.css - Feuille de style dédiée et moderne */
+/* CSS pour Métiers d'Avenir BTS SIO - Thème Tech Moderne */
 
-body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background: linear-gradient(120deg, #f0f4f8 0%, #e0e7ef 100%);
+/* Variables CSS pour cohérence */
+:root {
+    --primary-blue: #2563eb;
+    --primary-dark: #1e40af;
+    --secondary-cyan: #06b6d4;
+    --accent-purple: #7c3aed;
+    --success-green: #10b981;
+    --warning-orange: #f59e0b;
+    --text-dark: #1f2937;
+    --text-light: #6b7280;
+    --background-light: #f8fafc;
+    --background-white: #ffffff;
+    --border-color: #e5e7eb;
+    --shadow-light: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    --shadow-medium: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-large: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* Reset et base */
+* {
     margin: 0;
     padding: 0;
-    color: #222;
+    box-sizing: border-box;
 }
 
-header, nav, footer {
-    background: #2d3e50;
-    color: #fff;
-    padding: 1.2em 2em;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+body {
+    font-family: 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: linear-gradient(135deg, var(--background-light) 0%, #e2e8f0 100%);
+    color: var(--text-dark);
+    line-height: 1.6;
+    font-size: 16px;
 }
 
-nav {
+/* Conteneur principal avec iframe */
+body {
     display: flex;
-    gap: 1.5em;
-    justify-content: center;
-    font-size: 1.1em;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-nav a {
-    color: #fff;
-    text-decoration: none;
-    padding: 0.4em 1em;
-    border-radius: 4px;
-    transition: background 0.2s;
+/* En-tête principal */
+main {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-cyan) 100%);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: var(--shadow-large);
+    margin-bottom: 0;
 }
 
-nav a:hover {
-    background: #1abc9c;
-    color: #fff;
+main h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 
-main, .content {
-    max-width: 900px;
-    margin: 2em auto;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 24px rgba(44,62,80,0.08);
-    padding: 2em 2.5em;
+main h2 {
+    font-size: 1.25rem;
+    font-weight: 400;
+    opacity: 0.9;
+    margin-bottom: 1.5rem;
 }
 
-h1, h2, h3 {
-    color: #1abc9c;
-    margin-top: 0;
+main p {
+    max-width: 800px;
+    margin: 0 auto 1rem auto;
+    font-size: 1.1rem;
+    opacity: 0.95;
 }
 
-button, .btn {
-    background: #1abc9c;
-    color: #fff;
+/* Sommaire (iframe gauche) */
+iframe[name="f1"] {
     border: none;
-    border-radius: 4px;
-    padding: 0.6em 1.4em;
-    font-size: 1em;
+    background: var(--background-white);
+    box-shadow: var(--shadow-medium);
+}
+
+/* Contenu principal (iframe droite) */
+iframe[name="f2"] {
+    border: none;
+    background: var(--background-white);
+    box-shadow: var(--shadow-medium);
+}
+
+/* Styles pour les pages de contenu */
+h1 {
+    color: var(--primary-blue);
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    border-bottom: 3px solid var(--secondary-cyan);
+    padding-bottom: 0.5rem;
+}
+
+h2 {
+    color: var(--accent-purple);
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin: 2rem 0 1rem 0;
+    position: relative;
+}
+
+h2::before {
+    content: '';
+    position: absolute;
+    left: -1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 1.5rem;
+    background: linear-gradient(to bottom, var(--secondary-cyan), var(--accent-purple));
+    border-radius: 2px;
+}
+
+h3 {
+    color: var(--primary-dark);
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 1.5rem 0 0.75rem 0;
+}
+
+/* Paragraphes et texte */
+p {
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+    line-height: 1.7;
+}
+
+strong {
+    color: var(--primary-blue);
+    font-weight: 600;
+}
+
+em {
+    color: var(--accent-purple);
+    font-style: italic;
+    font-weight: 500;
+}
+
+/* Listes */
+ul, ol {
+    margin: 1rem 0;
+    padding-left: 2rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+}
+
+li strong {
+    color: var(--primary-blue);
+}
+
+/* Liens du sommaire */
+a {
+    display: block;
+    color: var(--text-dark);
+    text-decoration: none;
+    padding: 0.75rem 1rem;
+    margin: 0.25rem 0;
+    border-radius: 8px;
+    border-left: 4px solid transparent;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+a:hover {
+    background: linear-gradient(135deg, var(--primary-blue), var(--secondary-cyan));
+    color: white;
+    border-left-color: var(--warning-orange);
+    transform: translateX(4px);
+    box-shadow: var(--shadow-medium);
+}
+
+/* Tableaux modernes */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    background: var(--background-white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-medium);
+}
+
+th {
+    background: linear-gradient(135deg, var(--primary-blue), var(--primary-dark));
+    color: white;
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-dark);
+}
+
+tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+tr:hover {
+    background-color: #e0f2fe;
+    transform: scale(1.01);
+    transition: all 0.2s ease;
+}
+
+/* Grilles pour layout */
+div[style*="grid"] {
+    display: grid;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+/* Sections avec fond coloré */
+section {
+    background: var(--background-white);
+    padding: 2rem;
+    margin: 2rem 0;
+    border-radius: 12px;
+    box-shadow: var(--shadow-light);
+    border-left: 4px solid var(--secondary-cyan);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+section:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-medium);
+}
+
+/* Conteneur principal pour les pages de contenu */
+main, .content {
+    max-width: 1000px;
+    margin: 0;
+    padding: 2rem;
+    background: var(--background-light);
+    min-height: 100vh;
+}
+
+/* Boutons et éléments interactifs */
+button, .btn {
+    background: linear-gradient(135deg, var(--primary-blue), var(--secondary-cyan));
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
     cursor: pointer;
-    transition: background 0.2s;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-light);
 }
 
 button:hover, .btn:hover {
-    background: #159c86;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-medium);
+    background: linear-gradient(135deg, var(--primary-dark), var(--accent-purple));
 }
 
-ul, ol {
-    padding-left: 2em;
-}
-
-table {
-    border-collapse: collapse;
-    width: 100%;
-    margin: 1.5em 0;
-    background: #f9fafb;
-}
-
-table th, table td {
-    border: 1px solid #e1e4e8;
-    padding: 0.7em 1em;
-    text-align: left;
-}
-
-table th {
-    background: #eaf6f3;
-    color: #1abc9c;
-}
-
-footer {
+/* Sommaire titre */
+h1 {
+    background: linear-gradient(135deg, var(--primary-blue), var(--secondary-cyan));
+    color: white;
+    margin: 0 -1rem 2rem -1rem;
+    padding: 1.5rem;
     text-align: center;
-    font-size: 0.95em;
-    margin-top: 2em;
-    border-radius: 0 0 10px 10px;
+    border-radius: 12px 12px 0 0;
+    font-size: 1.5rem;
 }
 
-@media (max-width: 700px) {
-    main, .content {
-        padding: 1em 0.5em;
+/* Badges pour certifications/niveaux */
+td:contains("Élevé") {
+    color: var(--success-green);
+    font-weight: 600;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    main h1 {
+        font-size: 2rem;
     }
-    nav {
-        flex-direction: column;
-        gap: 0.5em;
+    
+    main h2 {
+        font-size: 1.1rem;
     }
+    
+    iframe {
+        width: 100% !important;
+        height: 400px !important;
+    }
+    
+    div[style*="grid"] {
+        grid-template-columns: 1fr !important;
+        gap: 1rem;
+    }
+    
+    section {
+        padding: 1.5rem;
+        margin: 1rem 0;
+    }
+}
+
+/* Animations subtiles */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Scrollbar personnalisée */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--background-light);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, var(--primary-blue), var(--secondary-cyan));
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, var(--primary-dark), var(--accent-purple));
 }
