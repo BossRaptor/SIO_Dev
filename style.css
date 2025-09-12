@@ -115,6 +115,29 @@ h2::before {
     border-radius: 2px;
 }
 
+/* Liens dans les titres h2 */
+h2 a {
+    color: var(--accent-purple);
+    text-decoration: none;
+    display: inline;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: none;
+    transition: color 0.3s ease;
+    transform: none;
+}
+
+h2 a:hover {
+    color: var(--primary-blue);
+    background: none;
+    transform: none;
+    border-left: none;
+    text-decoration: underline;
+    text-decoration-color: var(--secondary-cyan);
+    text-decoration-thickness: 2px;
+}
+
 h3 {
     color: var(--primary-dark);
     font-size: 1.25rem;
