@@ -72,44 +72,39 @@ iframe {
 }
 
 /* Tableau */
-/* Tableau stage simple et épuré */
 .stage-table {
     width: 100%;
-    border: 2px solid #3a6ed8;
     border-collapse: collapse;
-    margin: 20px 0;
     background: #fff;
+    margin: 20px 0;
+    border: 3px double #3a6ed8;
 }
-.stage-header th {
+.stage-table thead th {
     background: #3a6ed8;
     color: #fff;
-    padding: 12px;
-    font-size: 1.1em;
-    border: 2px solid #3a6ed8;
     text-align: center;
+    padding: 12px 10px;
+    border: 1px solid #3a6ed8;
 }
-.logos-cell {
-    width: 220px;
-    text-align: center;
-    border-right: 2px solid #3a6ed8;
+.stage-table td {
+    border: 1px solid #8db1ff; 
+    padding: 10px 12px;
     vertical-align: middle;
     background: #fff;
-    padding: 10px;
 }
-.logo-img {
-    width: 90%;
-    max-width: 180px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    box-shadow: 0 2px 8px rgba(58,110,216,0.08);
+.stage-table .logos-cell {
+    width: 230px;
+    text-align: left;
+    padding: 0; 
+    border-right: 1px solid #3a6ed8;
 }
-.etapes-cell {
-    padding: 18px 16px;
-    font-size: 1em;
-    border-left: none;
-    background: #fff;
-    color: #222;
-    line-height: 2.1em;
+.stage-table .logos-cell img {
+    display: block;
+    width: 100%;
+    max-width: 230px;
+}
+.stage-table tbody tr td:last-child {
+    line-height: 2.2; /* hauteur des lignes similaire à l'image */
 }
 
 /* Formulaire */
