@@ -11,7 +11,7 @@
 
 **Consignes de travail :** 
 
-Cette mission  **s'effectuera individuellement et sera notée**. Vous rédigerez votre site en HTML et en utilisant du code CSS simple qui **sera hébergé sur Github** **( Avant la fin de la séance \- 17h00** ).
+Cette mission  **s'effectuera individuellement et sera notée**. Vous rédigerez votre site en HTML et en utilisant du code CSS simple qui **sera hébergé sur Github** **( Avant la fin de la séance \- 18h00** ).
 
 Tous les fichiers créés devront contenir en haut du code, en commentaires, vos noms et prénoms. 
 

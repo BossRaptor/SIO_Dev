@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- Nom et Prénom : [Votre Nom] [Votre Prénom] -->
+    <meta charset="UTF-8">
+    <title>Tableau et Formulaire</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="content">
+        <h1>📝 Informations et Inscription</h1>
+        
+        <h2>📊 Tableau des Options BTS SIO</h2>
+        <table>
+            <tr>
+                <th>Aspects</th>
+                <th>Option SISR</th>
+                <th>Option SLAM</th>
+            </tr>
+            <tr>
+                <td>Intitulé</td>
+                <td>Solutions d'Infrastructure</td>
+                <td>Solutions Logicielles</td>
+            </tr>
+            <tr>
+                <td>Domaines</td>
+                <td>Réseaux, cybersécurité</td>
+                <td>Développement, programmation</td>
+            </tr>
+            <tr>
+                <td>Débouchés</td>
+                <td>Administrateur réseau</td>
+                <td>Développeur applications</td>
+            </tr>
+        </table>
+        
+        <h2>📋 Formulaire d'Inscription</h2>
+        <form id="inscriptionForm">
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" required>
+            
+            <label for="prenom">Prénom :</label>
+            <input type="text" id="prenom" name="prenom" required>
+            
+            <label for="dateNaissance">Date de naissance :</label>
+            <input type="date" id="dateNaissance" name="dateNaissance" required>
+            
+            <label for="classe">Classe :</label>
+            <select id="classe" name="classe" required>
+                <option value="">-- Sélectionnez --</option>
+                <option value="BTS1">BTS 1ère année</option>
+                <option value="BTS2">BTS 2ème année</option>
+            </select>
+            
+            <button type="submit">✅ Valider</button>
+            <button type="reset">❌ Annuler</button>
+        </form>
+    </div>
+    
+    <script>
+        document.getElementById('inscriptionForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Formulaire soumis !');
+        });
+    </script>
+</body>
+</html>
