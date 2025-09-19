@@ -1,0 +1,78 @@
+body{
+	font-family: arial, sans-serif;
+	background-color: #f5f7fb;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+h1{
+	color: #2c3e50; 
+}
+
+form{
+	background-color: #f0f8ff; 
+	max-width: 400px;
+	margin: 0 auto;
+	padding: 20px;
+	border-radius: 12px; 
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+}
+
+label{
+	display: block;
+	margin-bottom: 5px;
+	font-weight: bold;
+}
+
+/* Couleur des deux premiers labels et des suivants */
+.label-1,
+.label-2{ 
+	color: blue; 
+}
+.label-rest{ 
+	color: green; 
+}
+
+/* Champs du formulaire avec bordure bleue */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"]{
+	width: 90%;
+	padding: 10px;
+	margin-bottom: 10px;
+	border: 2px solid blue;
+	border-radius: 6px;
+}
+
+/* Bouton */
+input[type="submit"]{
+	background-color: blue; 
+	color: #fff; 
+	border: none;
+	padding: 10px 20px;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+input[type="submit"]:hover{
+	background-color: green; 
+}
+
+/* Case à cocher rouge si non cochée  */
+input[type="checkbox"]:not(:checked){
+	accent-color: red;
+}
+
+/* Couleur du texte du libellé selon l'état de la checkbox */
+tr:has(input[type="checkbox"]:checked) td:first-child label{ color: green !important; }
+tr:has(input[type="checkbox"]:not(:checked)) td:first-child label{ color: red !important; }
+
+/* Responsivité: formulaire 100% largeur sur mobile */
+@media (max-width: 500px){
+	form{
+		max-width: 100%;
+		width: 100%;
+	}
+}
