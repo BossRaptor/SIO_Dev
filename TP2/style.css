@@ -1,0 +1,51 @@
+body {
+    background: #fff;
+    color: #000;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    text-align: center;
+    font-size: 2.2em;
+    font-weight: bold;
+    text-decoration: underline;
+    color: #222;
+    margin-top: 30px;
+}
+p {
+    max-width: 700px;
+    margin: 20px auto;
+    font-size: 1.1em;
+    color: #222;
+}
+table {
+    border: 1px solid #000;
+    border-collapse: collapse;
+    margin: 30px auto;
+    width: 60%;
+    background: #fafafa;
+}
+th, td {
+    border: 1px solid #000;
+    padding: 10px 16px;
+    text-align: center;
+}
+th {
+    background: #e0e0e0;
+    font-weight: bold;
+}
+img {
+    max-width: 120px;
+    height: auto;
+}
+nav {
+    text-align: center;
+    margin: 30px 0 10px 0;
+}
+nav a {
+    color: #0074d9;
+    text-decoration: underline;
+    margin: 0 10px;
+    font-weight: bold;
+}
