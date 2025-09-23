@@ -13,12 +13,64 @@ a{
     text-decoration: underline;
 }
 
+/* Objectif 4: style page perso */
+header{
+    background: #4CAF50;
+    color: white;
+    padding: 12px;
+    text-align: center;
+}
+nav ul{ list-style: none; padding: 0; margin: 8px 0; text-align: center; }
+nav ul li{ display: inline; margin: 0 8px; }
+nav ul li a{ color: white; text-decoration: none; }
+
+section{
+    background: white;
+    padding: 12px;
+    margin: 12px auto;
+    width: 100%;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.08);
+}
+section img{ display: block; max-width: 100%; height: auto; margin: 10px 0; }
+
+footer{ text-align: center; padding: 10px; color: #333; }
+
+/* Bouton du formulaire */
 .btn{
     background: #333;
     color: white;
     border: none;
     padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
 }
 .btn:hover{
     background: #555;
 }
+
+/* Objectif 3: style du formulaire */
+form{
+    max-width: 520px;          /* centre + limite la largeur */
+    margin: 20px auto;         /* centre sur la page */
+    padding: 12px;             /* espace intérieur */
+    border: 1px solid #ccc;    /* fine bordure */
+    border-radius: 8px;        /* angles arrondis */
+    background: #f9f9ff;       /* légère couleur de fond */
+}
+table{ 
+    width: 100%;
+    border-collapse: collapse; /* colle les cellules */
+}
+td{ 
+    padding: 6px;              /* espace entre éléments */
+    vertical-align: middle;
+}
+input, select, textarea{
+    width: 100%;
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+textarea{ min-height: 80px; }
