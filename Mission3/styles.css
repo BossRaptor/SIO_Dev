@@ -1,0 +1,14 @@
+body{
+    font-family: Arial; 
+    margin: 20px;
+}
+h1{
+    font-size: 22px;
+}
+p{
+    font-size: 16px;
+}
+a{
+    color: blue;
+    text-decoration: underline;
+}
