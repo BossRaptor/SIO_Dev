@@ -12,3 +12,13 @@ a{
     color: blue;
     text-decoration: underline;
 }
+
+.btn{
+    background: #333;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+}
+.btn:hover{
+    background: #555;
+}
