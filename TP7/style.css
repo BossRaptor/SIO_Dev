@@ -1,0 +1,46 @@
+div{
+    background-color: blue;
+    height: 200px;
+    width: 800px;
+    margin: 10px;
+}
+
+p{
+    color: red;
+}
+
+.c1{
+    background-color: yellow;
+    height: 200px;
+    width: 1000px;
+    margin: 10px;
+}
+
+.p1
+{
+    color: green;
+}
+
+.block1{
+    background-color: blue;
+    float: left;
+    height: 200px;
+    width: 200px;
+    margin: 10px;
+}
+
+.block2{
+    background-color: blue;
+    float: left;
+    height: 200px;
+    width: 200px;
+    margin: 10px;
+}
+
+.block3{
+    background-color: blue;
+    float: left;
+    height: 200px;
+    width: 200px;
+    margin: 10px;
+}
