@@ -43,12 +43,14 @@ body {
     color: #000000;
     padding: 10px;
     margin-bottom: 10px;
+    border-radius: 10px;
 }
 
 img {
     width: 290px;
     height: auto;
     margin-top: 10px;
+    border-radius: 10px;
 }
 
 
