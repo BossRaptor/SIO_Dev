@@ -33,6 +33,9 @@ body {
     background-color: #2a2a2a;
     border: 1px solid #00d4ff;
     padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(186, 201, 204, 0.5);
+
 }
 
 .section-titre {
