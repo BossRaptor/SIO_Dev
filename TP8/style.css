@@ -1,0 +1,51 @@
+/* Thème Watch Dogs - Couleurs simples */
+body {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+#header {
+    background-color: #000000;
+    color: #00d4ff;
+    padding: 20px;
+    text-align: center;
+}
+
+#section-principale {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section {
+    flex: 1;
+    text-align: center;
+    background-color: #2a2a2a;
+    border: 1px solid #00d4ff;
+    padding: 15px;
+}
+
+.section-titre {
+    background-color: #00d4ff;
+    color: #000000;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#footer {
+    background-color: #000000;
+    color: #888888;
+    padding: 15px;
+    text-align: center;
+}
+
+.section-image img {
+    width: 290px;
+    height: auto;
+    margin-top: 10px;
+}
