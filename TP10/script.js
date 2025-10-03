@@ -38,3 +38,15 @@ function permutation() {
     document.getElementById("t2").value = x;
     document.getElementById("t1").value = y;
 }
+
+/* BONUS : bouton reset */
+function reset() {
+    var x = document.getElementById("t1").value;
+    var y = document.getElementById("t2").value;
+    var resultat = document.getElementById("t3").value;
+    var parite = document.getElementById("t4").value;
+    document.getElementById("t1").value = null;
+    document.getElementById("t2").value = null;
+    document.getElementById("t3").value = null;
+    document.getElementById("t4").value = null;
+}
