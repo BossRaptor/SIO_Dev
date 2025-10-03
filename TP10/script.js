@@ -23,7 +23,7 @@ function division() {
     var a = document.getElementById("t1").value;
     var b = document.getElementById("t2").value;
     var denominateur = Number(b);
-    if (denominateur === 0) {
+    if (denominateur == 0) {
         document.getElementById("t3").value = "Erreur: division par 0";
         return;
     }
