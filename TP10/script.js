@@ -31,7 +31,8 @@ function parite() {
     var modulo;
     if (Number(reponse) % 2 == 0) {
         modulo = "Pair";
-    } else {
+    } 
+    else {
         modulo = "Impair";
     }
     document.getElementById("t4").value = modulo;
