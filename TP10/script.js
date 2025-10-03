@@ -28,7 +28,12 @@ function division() {
 
 function parite() {
     var reponse = document.getElementById("t3").value;
-    var modulo = (Number(reponse) % 2 == 0) ? "Pair" : "Impair";
+    var modulo;
+    if (Number(reponse) % 2 == 0) {
+        modulo = "Pair";
+    } else {
+        modulo = "Impair";
+    }
     document.getElementById("t4").value = modulo;
 }
 
