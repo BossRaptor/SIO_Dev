@@ -30,3 +30,22 @@ button {
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+
+.conclusion {
+    background-color: #bdf3ff;
+    margin-top: 20px;
+    font-size: 1.1em;
+    color: #333;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.calculatrice {
+    background-color: #bdf3ff;
+    padding: 20px;
+    border-radius: 12px;
+    display: inline-block;
+}
