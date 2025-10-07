@@ -1,0 +1,215 @@
+/* Wael El Harti - Mission 5 : Styles CSS pour le CV */
+
+/* Réinitialisation et styles de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px; /* Uniformisation de la taille de police à 16px */
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Conteneur principal */
+.conteneur {
+    width: 780px; /* Largeur de 780px comme demandé */
+    margin: auto; /* Centrage avec margin: auto */
+    background-color: white;
+    border: 5px solid #3388CC; /* Bordure de 5px en couleur #3388CC */
+    border-radius: 15px; /* Bordure arrondie */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8); /* Ombre noire */
+    padding: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* En-tête */
+.entete {
+    display: flex;
+    align-items: center;
+    margin-bottom: 70px; /* Marge de 70px entre sections */
+    padding-bottom: 20px;
+    border-bottom: 2px solid #3388CC;
+}
+
+.photo {
+    margin-right: 30px;
+}
+
+.photo img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #3388CC;
+}
+
+.infos-personnelles h1 {
+    font-size: 28px;
+    color: #3388CC;
+    margin-bottom: 10px;
+}
+
+.poste {
+    font-size: 18px;
+    font-style: italic;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.coordonnees {
+    list-style: none;
+}
+
+.coordonnees li {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+/* Sections */
+section {
+    margin-bottom: 70px; /* Marge de 70px entre chaque section */
+    display: flex;
+}
+
+.titre-section {
+    width: 200px;
+    flex-shrink: 0;
+}
+
+.titre-section h2 {
+    font-size: 20px; /* Titres en gras avec taille 20px */
+    font-weight: bold;
+    color: #3388CC;
+    text-transform: uppercase;
+    border-bottom: 2px solid #3388CC;
+    padding-bottom: 5px;
+}
+
+.contenu-section {
+    flex: 1;
+    padding-left: 30px;
+}
+
+.contenu-section ul {
+    list-style: none;
+}
+
+.contenu-section li {
+    margin-bottom: 15px;
+}
+
+.contenu-section strong {
+    color: #3388CC;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contenu-section p {
+    margin-bottom: 5px;
+    text-align: justify;
+}
+
+/* Centres d'intérêt - style différent */
+.centres-interet .contenu-section ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.centres-interet .contenu-section li {
+    background-color: #f0f7ff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    border-left: 3px solid #3388CC;
+}
+
+/* Pied de page */
+footer {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 2px solid #3388CC;
+    color: #666;
+    font-size: 14px;
+}
+
+/* Media Queries pour la responsivité */
+@media screen and (max-width: 768px) {
+    .conteneur {
+        width: 95%;
+        margin: 10px auto;
+        padding: 20px;
+        border-width: 3px;
+    }
+    
+    .entete {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    
+    .photo {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    
+    .photo img {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .infos-personnelles h1 {
+        font-size: 24px;
+    }
+    
+    section {
+        flex-direction: column;
+        margin-bottom: 40px;
+    }
+    
+    .titre-section {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    
+    .titre-section h2 {
+        font-size: 18px;
+    }
+    
+    .contenu-section {
+        padding-left: 0;
+    }
+    
+    .centres-interet .contenu-section ul {
+        flex-direction: column;
+    }
+    
+    body {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .conteneur {
+        width: 98%;
+        padding: 15px;
+        margin: 5px auto;
+    }
+    
+    .infos-personnelles h1 {
+        font-size: 20px;
+    }
+    
+    .titre-section h2 {
+        font-size: 16px;
+    }
+    
+    body {
+        font-size: 13px;
+    }
+}
