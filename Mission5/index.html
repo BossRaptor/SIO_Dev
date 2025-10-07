@@ -8,154 +8,134 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="conteneur">
-        <!-- En-tête avec informations personnelles et photo comme dans l'exemple -->
-        <header class="entete">
-            <div class="infos-personnelles">
-                <h1>[Votre Nom PRÉNOM]</h1>
-                <p class="date-naissance">Né le [Date de naissance]</p>
-                <div class="coordonnees">
-                    <p>[Votre adresse complète]</p>
-                    <p>[Votre numéro de téléphone]</p>
-                    <p>[votre.email@exemple.com]</p>
-                </div>
-                <p class="permis">[Permis B (véhiculé)]</p>
+    <div class="CV">
+        <!-- Une entête contenant les informations personnelles et la photo -->
+        <div class="entete">
+            <div class="presentation">
+                <h1>El Harti Waël</h1>
+                <p>Né le 26 février 2006</p>
+                <p>10 rue Jacques Tati</p>
+                <p>+33 7 67 57 51 29</p>
+                <p>waelelharti@icloud.com</p>
+                <p>En possession du code NEPH</p>
             </div>
-            <div class="photo">
-                <img src="../AidenPierce.jpeg" alt="Photo de profil">
+            <div class="photo-profil">
+                <img class="photo" src="../TheSandwich.jpg" alt="Photo de profil" width="120" height="120">
             </div>
-        </header>
+        </div>
 
-        <!-- Section 1: Formation avec dates à gauche comme dans l'exemple -->
-        <section class="formation">
-            <div class="titre-section">
-                <h2>Formation</h2>
-            </div>
-            <div class="contenu-section">
-                <div class="ligne-cv">
-                    <div class="date">[2023-Auj]</div>
-                    <div class="description">
-                        <strong>[Nom de l'école/université]</strong>
-                        <p>[Description du diplôme et spécialités]</p>
-                    </div>
-                </div>
-                <div class="ligne-cv">
-                    <div class="date">[2020-2023]</div>
-                    <div class="description">
-                        <strong>[Nom de l'établissement précédent]</strong>
-                        <p>[Description du diplôme obtenu]</p>
-                    </div>
-                </div>
-                <div class="ligne-cv">
-                    <div class="date">[2017-2020]</div>
-                    <div class="description">
-                        <strong>[Autre formation]</strong>
-                        <p>[Description]</p>
-                    </div>
+        <!-- Section Formation - chacune contiendra deux blocs (titres et informations) -->
+        <div class="formation">
+            <h2>Formation</h2>
+            <div class="cv-ligne">
+                <div class="date-item">2025-2027</div>
+                <div class="contenu-item">
+                    <p><strong>BTS Services Informatiques aux Organisations (SIO)</strong><br>
+                    Lycée Polyvalent Parc de Vilgenis, Massy<br>
+                    Option SISR (Solutions Infrastructures, Systèmes et Réseaux)</p>
                 </div>
             </div>
-        </section>
+            <div class="cv-ligne">
+                <div class="date-item">2022-2025</div>
+                <div class="contenu-item">
+                    <p><strong>Baccalauréat technologique</strong><br>
+                    Lycée Emilie de Breteuil, Montigny-le-Bretonneux<br>
+                    Spécialités : SIN (Science de l'Information et du Numérique)</p>
+                </div>
+            </div>
+        </div>
 
-        <!-- Section 2: Expériences professionnelles avec dates à gauche -->
-        <section class="experience">
-            <div class="titre-section">
-                <h2>Expériences professionnelles</h2>
-            </div>
-            <div class="contenu-section">
-                <div class="ligne-cv">
-                    <div class="date">[2024-Présent]</div>
-                    <div class="description">
-                        <strong>[Nom du poste/entreprise]</strong>
-                        <p>[Description des missions et responsabilités]</p>
-                    </div>
-                </div>
-                <div class="ligne-cv">
-                    <div class="date">[2023-2024]</div>
-                    <div class="description">
-                        <strong>[Stage ou emploi précédent]</strong>
-                        <p>[Description des missions réalisées]</p>
-                    </div>
-                </div>
-                <div class="ligne-cv">
-                    <div class="date">[2022-2023]</div>
-                    <div class="description">
-                        <strong>[Autre expérience]</strong>
-                        <p>[Description]</p>
-                    </div>
-                </div>
-                <div class="ligne-cv">
-                    <div class="date">[2021-2022]<br>(18 mois)</div>
-                    <div class="description">
-                        <strong>[Expérience longue durée]</strong>
-                        <p>[Description détaillée]</p>
-                    </div>
+        <!-- Section Expérience Professionnelle -->
+        <div class="experience">
+            <h2>Expérience Professionnelle</h2>
+            <div class="cv-ligne">
+                <div class="date-item">Juin-Aout 2025</div>
+                <div class="contenu-item">
+                    <p><strong>Employé Polyvalent</strong><br>
+                    Recherche d'entreprise pour stage BTS SIO<br>
+                    Développement d'applications, maintenance de systèmes informatiques</p>
                 </div>
             </div>
-        </section>
+            <div class="cv-ligne">
+                <div class="date-item">2023-2024</div>
+                <div class="contenu-item">
+                    <p><strong>Projets scolaires</strong><br>
+                    Lycée Jean Rostand<br>
+                    Développement de sites web, création de bases de données, projets en équipe</p>
+                </div>
+            </div>
+        </div>
 
-        <!-- Section 3: Langues étrangères & compétences informatiques -->
-        <section class="competences">
-            <div class="titre-section">
-                <h2>Langues étrangères & compétences informatiques</h2>
-            </div>
-            <div class="contenu-section">
-                <div class="ligne-cv">
-                    <div class="date">Français</div>
-                    <div class="description">
-                        <strong>Courant (TBE6 : [note])</strong>
-                        <p>Langue maternelle</p>
-                    </div>
-                </div>
-                <div class="ligne-cv">
-                    <div class="date">Espagnol</div>
-                    <div class="description">
-                        <strong>Bonne compréhension</strong>
-                    </div>
-                </div>
-                <div class="ligne-cv">
-                    <div class="date">Informatique</div>
-                    <div class="description">
-                        <strong>Maîtrise des logiciels Excel, PowerPoint, Word, Adobe Acrobat Reader, Audition, [etc.]</strong>
-                        <p>Maîtrise d'Internet, des e-mails, des OS Mac, Linux, Windows, etc.</p>
-                    </div>
+        <!-- Section Compétences -->
+        <div class="competences">
+            <h2>Compétences</h2>
+            <div class="cv-ligne">
+                <div class="date-item">Programmation</div>
+                <div class="contenu-item">
+                    <p><strong>Langages de programmation</strong><br>
+                    HTML5, CSS3, JavaScript, PHP, Python, Java, SQL</p>
                 </div>
             </div>
-        </section>
+            <div class="cv-ligne">
+                <div class="date-item">Technologies</div>
+                <div class="contenu-item">
+                    <p><strong>Technologies web</strong><br>
+                    Bootstrap, MySQL, Apache, Node.js, React (notions)</p>
+                </div>
+            </div>
+            <div class="cv-ligne">
+                <div class="date-item">Outils</div>
+                <div class="contenu-item">
+                    <p><strong>Outils de développement</strong><br>
+                    Git/GitHub, VS Code, Eclipse, XAMPP, Figma, Photoshop</p>
+                </div>
+            </div>
+            <div class="cv-ligne">
+                <div class="date-item">Langues</div>
+                <div class="contenu-item">
+                    <p><strong>Langues étrangères</strong><br>
+                    Français (natif), Anglais (niveau B2), Arabe (notions)</p>
+                </div>
+            </div>
+        </div>
 
-        <!-- Section 4: Autres expériences et centres d'intérêt -->
-        <section class="centres-interet">
-            <div class="titre-section">
-                <h2>Autres expériences et centres d'intérêt</h2>
-            </div>
-            <div class="contenu-section">
-                <div class="ligne-cv">
-                    <div class="date">[2023-2024]</div>
-                    <div class="description">
-                        <strong>Membre d'[association], association de [type]</strong>
-                        <p>Chargé de la maintenance du site Internet de l'association et prospection en vue de la réalisation de bilans carbones.</p>
-                    </div>
-                </div>
-                <div class="ligne-cv">
-                    <div class="date">Mai 2024<br>15 jours</div>
-                    <div class="description">
-                        <strong>[Projet personnel], [lieu]</strong>
-                        <p>[Description du projet]</p>
-                    </div>
-                </div>
-                <div class="ligne-cv">
-                    <div class="date">Intérêts :</div>
-                    <div class="description">
-                        <p><strong>Informatique :</strong> [spécialités, langages, etc.]</p>
-                        <p><strong>Musique :</strong> [instruments, styles]</p>
-                        <p><strong>Sport :</strong> [activités pratiquées]</p>
-                    </div>
+        <!-- Section Centres d'intérêt -->
+        <div class="centres-interet">
+            <h2>Centres d'intérêt</h2>
+            <div class="cv-ligne">
+                <div class="date-item">Informatique</div>
+                <div class="contenu-item">
+                    <p><strong>Passion informatique</strong><br>
+                    Hacking, Développement, Électronique</p>
                 </div>
             </div>
-        </section>
+            <div class="cv-ligne">
+                <div class="date-item">Jeux Vidéos</div>
+                <div class="contenu-item">
+                    <p><strong>Gaming et développement</strong><br>
+                    Jeux Solo, RPG, Simulations, Développement de jeux</p>
+                </div>
+            </div>
+            <div class="cv-ligne">
+                <div class="date-item">Sport</div>
+                <div class="contenu-item">
+                    <p><strong>Activités physiques</strong><br>
+                    Musculation, Arts martiaux, Fitness</p>
+                </div>
+            </div>
+            <div class="cv-ligne">
+                <div class="date-item">Technologie</div>
+                <div class="contenu-item">
+                    <p><strong>Veille technologique</strong><br>
+                    Intelligence artificielle, Nouvelles technologies</p>
+                </div>
+            </div>
+        </div>
 
         <!-- Pied de page -->
         <footer>
-            <p>CV créé en HTML/CSS - Mission 5 BTS SIO</p>
+            <a href="../index.html">Retour à l'accueil</a>
+            <p>CV créé en HTML/CSS par Waël El Harti - Mission 5 BTS SIO</p>
         </footer>
     </div>
 </body>

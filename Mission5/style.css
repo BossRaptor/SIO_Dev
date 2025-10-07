@@ -1,215 +1,149 @@
-/* Wael El Harti - Mission 5 : Styles CSS pour le CV */
-
-/* Réinitialisation et styles de base */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* ====================
+   Base et structure
+   ==================== */
 body {
-    font-family: Arial, sans-serif;
-    font-size: 16px; /* Uniformisation de la taille de police à 16px */
-    line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
+    font-size: 16px;
+    font-family: georgia, arial, sans-serif;
 }
 
-/* Conteneur principal */
-.conteneur {
-    width: 780px; /* Largeur de 780px comme demandé */
-    margin: auto; /* Centrage avec margin: auto */
-    background-color: white;
-    border: 5px solid #3388CC; /* Bordure de 5px en couleur #3388CC */
-    border-radius: 15px; /* Bordure arrondie */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8); /* Ombre noire */
-    padding: 30px;
-    margin-top: 20px;
+.CV {
+    width: 780px;
+    margin: auto;
+    background-color: rgb(54, 188, 255);
+    border: 5px solid rgb(128, 128, 255);
+    border-radius: 10px;
+}
+
+/* ====================
+   En-tête
+   ==================== */
+.entete {
+    background-color: rgba(174, 243, 95, 0.50);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 70px;
+}
+.presentation {
+    flex: 1;
+    padding: 15px;
+    margin: 10px;
+}
+.presentation h1 {
+    margin: 0 0 10px 0;
+}
+.presentation p {
+    margin: 5px 0;
+}
+.photo-profil {
+    margin: 10px;
+    padding: 5px;
+    display: flex;
+    align-items: flex-start;
+}
+.photo {
+    border-radius: 20%;
+}
+
+/* ====================
+   Sections principales
+   ==================== */
+.formation {
+    background-color: rgba(255, 255, 255, 0.50);
+}
+.experience {
+    background-color: rgba(255, 255, 255, 0.50);
+}
+.competences {
+    background-color: rgba(255, 255, 255, 0.50);
+}
+.centres-interet {
+    background-color: rgba(255, 255, 255, 0.50);
+}
+.formation, .experience, .competences, .centres-interet {
+    margin-bottom: 70px;
+}
+.formation h2, .experience h2, .competences h2, .centres-interet h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+    padding: 10px 15px;
+}
+.cv-ligne {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
     margin-bottom: 20px;
 }
-
-/* En-tête */
-.entete {
-    display: flex;
-    align-items: center;
-    margin-bottom: 70px; /* Marge de 70px entre sections */
-    padding-bottom: 20px;
-    border-bottom: 2px solid #3388CC;
-}
-
-.photo {
-    margin-right: 30px;
-}
-
-.photo img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #3388CC;
-}
-
-.infos-personnelles h1 {
-    font-size: 28px;
-    color: #3388CC;
-    margin-bottom: 10px;
-}
-
-.poste {
-    font-size: 18px;
-    font-style: italic;
-    color: #666;
-    margin-bottom: 15px;
-}
-
-.coordonnees {
-    list-style: none;
-}
-
-.coordonnees li {
-    margin-bottom: 5px;
-    font-size: 14px;
-}
-
-/* Sections */
-section {
-    margin-bottom: 70px; /* Marge de 70px entre chaque section */
-    display: flex;
-}
-
-.titre-section {
-    width: 200px;
+.cv-ligne .date-item {
+    width: 150px;
+    font-weight: bold;
+    text-align: right;
+    margin-right: 20px;
     flex-shrink: 0;
 }
-
-.titre-section h2 {
-    font-size: 20px; /* Titres en gras avec taille 20px */
-    font-weight: bold;
-    color: #3388CC;
-    text-transform: uppercase;
-    border-bottom: 2px solid #3388CC;
-    padding-bottom: 5px;
-}
-
-.contenu-section {
+.cv-ligne .contenu-item {
     flex: 1;
-    padding-left: 30px;
 }
-
-.contenu-section ul {
-    list-style: none;
-}
-
-.contenu-section li {
+.contenu-item {
     margin-bottom: 15px;
 }
-
-.contenu-section strong {
-    color: #3388CC;
+.contenu-item strong {
+    font-weight: bold;
     display: block;
     margin-bottom: 5px;
 }
-
-.contenu-section p {
-    margin-bottom: 5px;
-    text-align: justify;
+.contenu-item p {
+    margin: 3px 0;
 }
 
-/* Centres d'intérêt - style différent */
-.centres-interet .contenu-section ul {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-}
-
-.centres-interet .contenu-section li {
-    background-color: #f0f7ff;
-    padding: 8px 15px;
-    border-radius: 5px;
-    border-left: 3px solid #3388CC;
-}
-
-/* Pied de page */
+/* ====================
+   Footer
+   ==================== */
 footer {
+    background-color: rgb(190, 255, 253);
     text-align: center;
-    padding-top: 20px;
-    border-top: 2px solid #3388CC;
-    color: #666;
-    font-size: 14px;
+    padding: 15px;
+    margin-top: 20px;
 }
 
-/* Media Queries pour la responsivité */
+/* ====================
+   Responsive
+   ==================== */
 @media screen and (max-width: 768px) {
-    .conteneur {
+    .CV {
         width: 95%;
         margin: 10px auto;
-        padding: 20px;
-        border-width: 3px;
     }
-    
     .entete {
         flex-direction: column;
+        align-items: center;
         text-align: center;
-        margin-bottom: 40px;
     }
-    
-    .photo {
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
-    
-    .photo img {
-        width: 100px;
-        height: 100px;
-    }
-    
-    .infos-personnelles h1 {
-        font-size: 24px;
-    }
-    
-    section {
-        flex-direction: column;
-        margin-bottom: 40px;
-    }
-    
-    .titre-section {
+    .presentation {
+        margin-bottom: 10px;
         width: 100%;
-        margin-bottom: 15px;
     }
-    
-    .titre-section h2 {
-        font-size: 18px;
+    .photo-profil {
+        margin: 0 auto 10px auto;
+        padding: 0;
+        justify-content: center;
     }
-    
-    .contenu-section {
-        padding-left: 0;
-    }
-    
-    .centres-interet .contenu-section ul {
+    .cv-ligne {
         flex-direction: column;
+        align-items: stretch;
     }
-    
-    body {
-        font-size: 14px;
+    .cv-ligne .date-item {
+        width: 100%;
+        text-align: left;
+        margin-right: 0;
+        margin-bottom: 4px;
     }
-}
-
-@media screen and (max-width: 480px) {
-    .conteneur {
-        width: 98%;
-        padding: 15px;
-        margin: 5px auto;
+    .cv-ligne .contenu-item {
+        width: 100%;
     }
-    
-    .infos-personnelles h1 {
-        font-size: 20px;
-    }
-    
-    .titre-section h2 {
-        font-size: 16px;
-    }
-    
-    body {
-        font-size: 13px;
+    .formation, .experience, .competences, .centres-interet {
+        margin-bottom: 40px;
     }
 }
