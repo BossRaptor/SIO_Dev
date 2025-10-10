@@ -1,0 +1,102 @@
+/* CSS pour Métiers d'Avenir BTS SIO - Thème Tech Moderne */
+
+/* Variables CSS pour cohérence */
+:root {
+    --primary-blue: #2563eb;
+    --primary-dark: #1e40af;
+    --secondary-cyan: #06b6d4;
+    --accent-purple: #7c3aed;
+    --success-green: #10b981;
+    --warning-orange: #f59e0b;
+    --text-dark: #1f2937;
+    --text-light: #6b7280;
+    --background-light: #f8fafc;
+    --background-white: #ffffff;
+    --border-color: #e5e7eb;
+    --shadow-light: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    --shadow-medium: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-large: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* Reset et base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+    body {
+        font-family: Arial, sans-serif;
+        background: #f4f8fb;
+        color: #174082;
+        margin: 0;
+    }
+    main, .content {
+        max-width: 900px;
+        margin: 2em auto;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px #cfd8dc;
+        padding: 2em;
+    }
+    h1 {
+        color: #1976d2;
+        font-size: 2rem;
+        border-bottom: 1px solid #1976d2;
+        padding-bottom: 0.3em;
+    }
+    h2 {
+        color: #1565c0;
+        font-size: 1.2rem;
+        margin-top: 2em;
+    }
+    a {
+        color: #1976d2;
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+    ul, ol {
+        padding-left: 1.5em;
+    }
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        margin: 1.5em 0;
+        background: #f9fafb;
+    }
+    th, td {
+        border: 1px solid #e1e4e8;
+        padding: 0.6em 1em;
+        text-align: left;
+    }
+    th {
+        background: #e3f2fd;
+        color: #1976d2;
+    }
+    button, .btn {
+        background: #1976d2;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        padding: 0.5em 1.2em;
+        font-size: 1em;
+        cursor: pointer;
+    }
+    button:hover, .btn:hover {
+        background: #1565c0;
+    }
+    @media (max-width: 700px) {
+        main, .content {
+            padding: 1em 0.5em;
+        }
+        h1 {
+            font-size: 1.2rem;
+        }
+        h2 {
+            font-size: 1rem;
+        }
+    }
