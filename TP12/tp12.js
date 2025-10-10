@@ -7,13 +7,14 @@ function ex1_moyenne() {
     // Vérifier que les notes sont valides (entre 0 et 20)
     if (n1 < 0 || n1 > 20 || n2 < 0 || n2 > 20 || n3 < 0 || n3 > 20) {
         document.write("Erreur : Les notes doivent être des nombres entre 0 et 20.<br>");
+        document.write("<br> <button onclick=\"ex1_moyenne()\">Refaire</button>");
         document.write("<br><br><a href='tp12.html'>Retour</a>");
         return;
     }
     
     var moyenne = (n1 + n2 + n3) / 3;
 
-    document.write("Voici la moyenne des notes : " + moyenne.toFixed(2) + "<br>");
+    document.write("<br>" + "Voici la moyenne des notes : " + moyenne.toFixed(2) + "<br>");
 
     if (moyenne < 10) {
         document.write("Vous êtes recalé.");
