@@ -36,26 +36,27 @@ function ex2_temperature() {
     var t = Number(prompt("Température (°C) :"));
     
     if (t < 10 && t >= 0) {
-        document.write("Froid");
+        document.write("<br>" + "Froid");
         document.bgColor = "blue";
     }
     else if (t < 0) {
-        document.write("Tres froid");
+        document.write("<br>" + "Tres froid");
         document.bgColor = "lightblue";
     }
     else if (t >= 10 && t <= 25) {
-        document.write("Normal");
+        document.write("<br>" + "Normal");
         document.bgColor = "green";
     }
     else if (t > 25 && t <= 35) {
-        document.write("Chaud");
+        document.write("<br>" + "Chaud");
         document.bgColor = "orange";
     }
     else if (t > 35) {
-        document.write("Très chaud");
+        document.write("<br>" + "Très chaud");
         document.bgColor = "red";
     }
 
+    document.write("<br> <button onclick=\"ex2_temperature()\">Refaire</button>");
     document.write("<br><br><a href='tp12.html'>Retour</a>");
 }
 
@@ -64,16 +65,17 @@ function ex3_comparaison() {
     var b = Number(prompt("Deuxième nombre :"));
     
     if (a > b) {
-        document.write("Le plus grand est : " + a + "<br>");
-        document.write("Le plus petit est : " + b + "<br>");
+        document.write("<br>" + "Le plus grand est : " + a + "<br>");
+        document.write("<br>" + "Le plus petit est : " + b + "<br>");
     }
     else if (a < b) {
-        document.write("Le plus grand est : " + b + "<br>");
-        document.write("Le plus petit est : " + a + "<br>");
+        document.write("<br>" + "Le plus grand est : " + b + "<br>");
+        document.write("<br>" + "Le plus petit est : " + a + "<br>");
     }
     else if (a == b) {
-        document.write("Les deux nombres sont égaux : " + a + "<br>");
+        document.write("<br>" + "Les deux nombres sont égaux : " + a + "<br>");
     }
-    
+
+    document.write("<br> <button onclick=\"ex3_comparaison()\">Refaire</button>");
     document.write("<br><br><a href='tp12.html'>Retour</a>");
 }
