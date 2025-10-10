@@ -17,6 +17,8 @@ function moyenne() {
     else {
         document.write("Vous etes recalé !");
     }
+
+    document.write("<br><br><a href='tp11.html'>Retour</a>");
 }
 
 function age() {
@@ -29,6 +31,9 @@ function age() {
         document.write("Vous etes mineur !");
         document.bgColor = "red";
     }
+
+    document.write("<br><br><a href='tp11.html'>Retour</a>");
+
 }
 
 function nom() {
@@ -37,12 +42,26 @@ function nom() {
     document.write('<div style="margin:auto; width:300px; border:2px solid blue;">');
     document.write("Bonjour " + prenom + " " + nom);
     document.write("</div>");
+        document.write("<br><br><a href='tp11.html'>Retour</a>");
+
 }
 
 function couleur() {
     let couleur = prompt("Donner une couleur")
-    if (couleur == "rouge" || couleur == "red") {
+    if (couleur == "blanc" || couleur == "white") {
+        document.body.style.backgroundColor = "white";
+    }
+    else if (couleur == "rouge" || couleur == "red") {
         document.body.style.backgroundColor = "red";
+    }
+    else if (couleur == "jaune" || couleur == "yellow") {
+        document.body.style.backgroundColor = "yellow";
+    }
+    else if (couleur == "noir" || couleur == "black") {
+        document.body.style.backgroundColor = "black";
+    }
+    else if (couleur == "gris" || couleur == "gray" || couleur == "grey") {
+        document.body.style.backgroundColor = "gray";
     }
     else if (couleur == "bleu" || couleur == "blue") {
         document.body.style.backgroundColor = "blue";
