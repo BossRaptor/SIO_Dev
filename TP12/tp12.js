@@ -3,79 +3,92 @@ function ex1_moyenne() {
     var n1 = Number(prompt("Donner la première note (sur 20) :"));
     var n2 = Number(prompt("Donner la deuxième note (sur 20) :"));
     var n3 = Number(prompt("Donner la troisième note (sur 20) :"));
-    
+
+    var iframe = document.getElementById("resultatjs");
+    iframe.contentDocument.open();
+    iframe.contentDocument.write("<link rel='stylesheet' href='tp12.css'>");
+
     // Vérifier que les notes sont valides (entre 0 et 20)
     if (n1 < 0 || n1 > 20 || n2 < 0 || n2 > 20 || n3 < 0 || n3 > 20) {
-        document.write("Erreur : Les notes doivent être des nombres entre 0 et 20.<br>");
-        document.write("<br> <button onclick=\"ex1_moyenne()\">Refaire</button>");
-        document.write("<br><br><a href='tp12.html'>Retour</a>");
+        iframe.contentDocument.write("Erreur : Les notes doivent être des nombres entre 0 et 20.<br>");
+        iframe.contentDocument.write("<br> <button onclick=\"parent.ex1_moyenne()\">Refaire</button>");
+        iframe.contentDocument.write("<br><br><a href='tp12.html'>Retour</a>");
+        iframe.contentDocument.close();
         return;
     }
     
     var moyenne = (n1 + n2 + n3) / 3;
 
-    document.write("<br>" + "Voici la moyenne des notes : " + moyenne.toFixed(2) + "<br>");
+    iframe.contentDocument.write("<br>Voici la moyenne des notes : " + moyenne.toFixed(2) + "<br>");
 
     if (moyenne < 10) {
-        document.write("Vous êtes recalé.");
+    iframe.contentDocument.write("Vous êtes recalé.");
     }
     else if (moyenne >= 10 && moyenne < 12) {
-        document.write("Vous êtes admis avec mention passable.");
+    iframe.contentDocument.write("Vous êtes admis avec mention passable.");
     }
     else if (moyenne >= 12 && moyenne < 14) {
-        document.write("Vous êtes admis avec mention bien.");
+    iframe.contentDocument.write("Vous êtes admis avec mention bien.");
     }
     else {
-        document.write("Vous êtes admis avec mention très bien!");
+        iframe.contentDocument.write("Vous êtes admis avec mention très bien!");
     }
 
-    document.write("<br><br><a href='tp12.html'>Retour</a>");
+    iframe.contentDocument.write("<br> <button onclick=\"parent.ex1_moyenne()\">Refaire</button>");
+    iframe.contentDocument.close();
 }
 
 function ex2_temperature() {
     var t = Number(prompt("Température (°C) :"));
-    
+    var iframe = document.getElementById("resultatjs");
+    iframe.contentDocument.open();
+    iframe.contentDocument.write("<link rel='stylesheet' href='tp12.css'>");
+
     if (t < 10 && t >= 0) {
-        document.write("<br>" + "Froid");
-        document.bgColor = "blue";
+        iframe.contentDocument.write("<br>Froid");
+        iframe.bgcolor = "lightblue";
     }
     else if (t < 0) {
-        document.write("<br>" + "Tres froid");
-        document.bgColor = "lightblue";
+        iframe.contentDocument.write("<br>Tres froid");
+        iframe.bgcolor = "blue";
     }
     else if (t >= 10 && t <= 25) {
-        document.write("<br>" + "Normal");
-        document.bgColor = "green";
+        iframe.contentDocument.write("<br>Normal");
+        iframe.bgcolor = "lightgreen";
     }
     else if (t > 25 && t <= 35) {
-        document.write("<br>" + "Chaud");
-        document.bgColor = "orange";
+        iframe.contentDocument.write("<br>Chaud");
+        iframe.bgcolor = "orange";
     }
     else if (t > 35) {
-        document.write("<br>" + "Très chaud");
-        document.bgColor = "red";
+        iframe.contentDocument.write("<br>Très chaud");
+        iframe.bgcolor = "red";
     }
 
-    document.write("<br> <button onclick=\"ex2_temperature()\">Refaire</button>");
-    document.write("<br><br><a href='tp12.html'>Retour</a>");
+    iframe.contentDocument.write("<br> <button onclick=\"parent.ex2_temperature()\">Refaire</button>");
+
+    iframe.contentDocument.close();
 }
 
 function ex3_comparaison() {
     var a = Number(prompt("Premier nombre :"));
     var b = Number(prompt("Deuxième nombre :"));
+    var iframe = document.getElementById("resultatjs");
+    iframe.contentDocument.open();
+    iframe.contentDocument.write("<link rel='stylesheet' href='tp12.css'>");
     
     if (a > b) {
-        document.write("<br>" + "Le plus grand est : " + a + "<br>");
-        document.write("<br>" + "Le plus petit est : " + b + "<br>");
+        iframe.contentDocument.write("<br>Le plus grand est : " + a + "<br>");
+        iframe.contentDocument.write("<br>Le plus petit est : " + b + "<br>");
     }
     else if (a < b) {
-        document.write("<br>" + "Le plus grand est : " + b + "<br>");
-        document.write("<br>" + "Le plus petit est : " + a + "<br>");
+        iframe.contentDocument.write("<br>Le plus grand est : " + b + "<br>");
+        iframe.contentDocument.write("<br>Le plus petit est : " + a + "<br>");
     }
     else if (a == b) {
-        document.write("<br>" + "Les deux nombres sont égaux : " + a + "<br>");
+        iframe.contentDocument.write("<br>Les deux nombres sont égaux : " + a + "<br>");
     }
 
-    document.write("<br> <button onclick=\"ex3_comparaison()\">Refaire</button>");
-    document.write("<br><br><a href='tp12.html'>Retour</a>");
+    iframe.contentDocument.write("<br> <button onclick=\"parent.ex3_comparaison()\">Refaire</button>");
+    iframe.contentDocument.close();
 }
