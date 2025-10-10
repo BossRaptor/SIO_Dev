@@ -5,76 +5,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hub BTS SIO – TPs & Missions</title>
     <link rel="stylesheet" href="hub.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <meta name="description" content="Hub de navigation vers les TP et Missions du BTS SIO.">
     <meta name="color-scheme" content="light dark">
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='16' fill='%233498db'/%3E%3Ctext x='50' y='60' text-anchor='middle' font-size='54' fill='white' font-family='Arial'%3ES%3C/text%3E%3C/svg%3E">
+        <style>
+            #pair {
+                box-shadow: 0 0 12px 3px #00ff00, 0 0 24px 6px #00ff00;
+                border-radius: 10px;
+                transition: box-shadow 0.3s;
+            }
+        </style>
 </head>
 <body>
     <header class="site-header">
         <h1>🎓 BTS SIO – Hub des TP & Missions</h1>
         <p class="subtitle">Retrouvez ici tous les travaux réalisés en première année.</p>
+        <p class="presentation">Bonjour, je suis Waël El Harti, étudiant en BTS SIO. Bienvenue sur mon hub !</p>
     </header>
 
     <main>
         <section class="section">
             <h2 class="section-title">📚 Travaux Pratiques (TP)</h2>
             <div class="cards-grid">
-                <a class="card" href="TP1/index.html">
+                <a class="card" id="impair" href="TP1/index.html">
                     <div class="card-icon">🎓</div>
                     <h3>TP1</h3>
                     <p>Présentation du BTS SIO et spécialités.</p>
-        </a>
+                </a>
 
-        <div class="card card-disabled" aria-disabled="true" tabindex="-1">
+                <div class="card card-disabled" id="pair" aria-disabled="true" tabindex="-1">
                     <div class="card-icon">⏳</div>
                     <h3>TP2</h3>
                     <p>À venir (vide).</p>
-        </div>
+                </div>
 
-        <a class="card" href="TP3/index.html">
-            <div class="card-icon">🧭</div>
+                <a class="card" id="impair" href="TP3/index.html">
+                    <div class="card-icon">🧭</div>
                     <h3>TP3</h3>
-            <p>Métiers d’avenir et navigation bi-volet.</p>
-        </a>
+                    <p>Métiers d’avenir et navigation bi-volet.</p>
+                </a>
 
-        <a class="card" href="TP5/index.html">
+                <a class="card" id="impair" href="TP5/index.html">
                     <div class="card-icon">🎨</div>
                     <h3>TP5</h3>
                     <p>Découverte du CSS.</p>
-        </a>
+                </a>
 
-         <a class="card" href="TP6/inscription.html">
+                <a class="card" id="pair" href="TP6/inscription.html">
                     <div class="card-icon">📝</div>
                     <h3>TP6</h3>
                     <p>Formulaire structuré.</p>
-        </a>
+                </a>
 
-         <a class="card" href="TP7/TP7.1.html">
+                <a class="card" id="impair" href="TP7/TP7.1.html">
                     <div class="card-icon">🔧</div>
                     <h3>TP7</h3>
                     <p>Exercices pratiques.</p>
-        </a>
+                </a>
 
-        <a class="card" href="TP8/index.html">
+                <a class="card" id="pair" href="TP8/index.html">
                     <div class="card-icon">🕵️</div>
                     <h3>TP8</h3>
                     <p>Présentation de Aiden Pierce</p>
-        </a>
-        
-        <a class="card" href="TP9/calculatrice.html">
+                </a>
+                
+                <a class="card" id="impair" href="TP9/calculatrice.html">
                     <div class="card-icon">🧮</div>
                     <h3>TP9</h3>
                     <p>TP JS calculatrice</p>
-        </a>
+                </a>
 
-        <a class="card" href="TP10/index.html">
+                <a class="card" id="pair" href="TP10/index.html">
                     <div class="card-icon">⚡</div>
                     <h3>TP10</h3>
                     <p>TP JS calculatrice avancée</p>
-        </a>
+                </a>
+
+                <a class="card" id="impair" href="TP11/tp11.html">
+                    <div class="card-icon">📘</div>
+                    <h3>TP11</h3>
+                    <p>TP boutons fonctions JavaScript.</p>
+                </a>
             </div>
         </section>
 
