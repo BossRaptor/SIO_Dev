@@ -1,52 +1,68 @@
 
 function ex1_moyenne() {
-	var n1 = prompt("Donner la première note :");
-    var n2 = prompt("Donner la deuxième note :");
-    var n3 = prompt("Donner la troisième note :");
+    var n1 = Number(prompt("Donner la première note (sur 20) :"));
+    var n2 = Number(prompt("Donner la deuxième note (sur 20) :"));
+    var n3 = Number(prompt("Donner la troisième note (sur 20) :"));
     
-    var somme = Number(n1) + Number(n2) + Number(n3);
-    var moyenne = somme / 3;
+    // Vérifier que les notes sont valides (entre 0 et 20)
+    if (isNaN(n1) || isNaN(n2) || isNaN(n3) || 
+        n1 < 0 || n1 > 20 || n2 < 0 || n2 > 20 || n3 < 0 || n3 > 20) {
+        document.write("Erreur : Les notes doivent être des nombres entre 0 et 20.<br>");
+        document.write("<br><br><a href='tp12.html'>Retour</a>");
+        return;
+    }
+    
+    var moyenne = (n1 + n2 + n3) / 3;
 
-    document.write("Voici la moyenne des notes : " + moyenne + "<br>");
+    document.write("Voici la moyenne des notes : " + moyenne.toFixed(2) + "<br>");
 
     if (moyenne < 10) {
-        document.write("Vous etes recalé.");
+        document.write("Vous êtes recalé.");
     }
     else if (moyenne >= 10 && moyenne < 12) {
-        document.write("Vous etes admis avec mention passable.");
+        document.write("Vous êtes admis avec mention passable.");
     }
     else if (moyenne >= 12 && moyenne < 14) {
-        document.write("Vous etes admis avec mention bien.");
+        document.write("Vous êtes admis avec mention bien.");
     }
     else {
-        document.write("Vous etes admis avec mention très bien!");
+        document.write("Vous êtes admis avec mention très bien!");
     }
 
     document.write("<br><br><a href='tp12.html'>Retour</a>");
 }
 
 function ex2_temperature() {
-	var t = prompt("Température (°C) :");
-    if (t < 10) {
+    var t = Number(prompt("Température (°C) :"));
+    
+    if (t < 10 && t >= 0) {
         document.write("Froid");
+        document.bgColor = "blue";
     }
-    else if (t >= 10 && t < 25) {
+    else if (t < 0) {
+        document.write("Tres froid");
+        document.bgColor = "lightblue";
+    }
+    else if (t >= 10 && t <= 25) {
         document.write("Normal");
+        document.bgColor = "green";
     }
-    else if (t >= 25) {
+    else if (t > 25 && t <= 35) {
         document.write("Chaud");
+        document.bgColor = "orange";
     }
-    else {
-        document.write("Entrée invalide.");
+    else if (t > 35) {
+        document.write("Très chaud");
+        document.bgColor = "red";
     }
 
     document.write("<br><br><a href='tp12.html'>Retour</a>");
 }
 
 function ex3_comparaison() {
-	var a = prompt("Premier nombre :"));
-	var b = prompt("Deuxième nombre :"));
-	
+    var a = Number(prompt("Premier nombre :"));
+    var b = Number(prompt("Deuxième nombre :"));
+    
     if (a > b) {
         document.write("Le plus grand est : " + a + "<br>");
         document.write("Le plus petit est : " + b + "<br>");
@@ -58,7 +74,6 @@ function ex3_comparaison() {
     else if (a == b) {
         document.write("Les deux nombres sont égaux : " + a + "<br>");
     }
-    else {
-        document.write("Entrée invalide.");
-    }
+    
+    document.write("<br><br><a href='tp12.html'>Retour</a>");
 }
