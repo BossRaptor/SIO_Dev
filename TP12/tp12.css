@@ -13,6 +13,7 @@ h1 {
 }
 
 button {
+    cursor: pointer;
     background-color: #3498db;
     color: white;
     border: 3px solid #004a7b;
@@ -21,9 +22,11 @@ button {
     border-radius: 5px;
     font-size: 16px;
     transition: background-color 0.3s;
+    width: 400px;
 }
 
 button:hover {
+    cursor: pointer;
     background-color: #004a7b;
     border: 4px solid #3498db;
 }
