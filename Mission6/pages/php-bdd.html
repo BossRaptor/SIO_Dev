@@ -1,0 +1,68 @@
+<!-- Waël El Harti - BTS SIO 1ère année -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP & Base de Données</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <h1>PHP & Base de Données</h1>
+    </header>
+
+    <main class="contenu">
+        <h2>Connexion PHP - MySQL</h2>
+        
+        <div style="background-color: #e8f5e8; padding: 20px; border-radius: 8px; margin: 20px 0;">
+            <h3>Interaction PHP/BDD</h3>
+            <p>Apprentissage de la connexion entre PHP et MySQL pour créer des applications web dynamiques.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 20px 0;">
+            <div style="background-color: #f8f9fa; padding: 15px; border-radius: 5px; border-left: 4px solid #4caf50;">
+                <h4>Technologies utilisées</h4>
+                <ul>
+                    <li>PHP 8.x</li>
+                    <li>MySQL/MariaDB</li>
+                    <li>PDO (PHP Data Objects)</li>
+                    <li>XAMPP/WAMP</li>
+                </ul>
+            </div>
+            
+            <div style="background-color: #f8f9fa; padding: 15px; border-radius: 5px; border-left: 4px solid #2e7d32;">
+                <h4>Fonctionnalités développées</h4>
+                <ul>
+                    <li>CRUD (Create, Read, Update, Delete)</li>
+                    <li>Authentification utilisateur</li>
+                    <li>Validation des données</li>
+                    <li>Sécurisation des requêtes</li>
+                </ul>
+            </div>
+        </div>
+
+        <div style="background-color: #fff3e0; padding: 15px; border-radius: 5px; margin: 20px 0;">
+            <h4>Exemple de connexion PDO</h4>
+            <pre style="background-color: #263238; color: #fff; padding: 15px; border-radius: 3px; overflow-x: auto;">
+&lt;?php
+try {
+    $pdo = new PDO('mysql:host=localhost;dbname=portfolio', 
+                   $username, $password);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    
+    $stmt = $pdo->prepare("SELECT * FROM projets WHERE id = ?");
+    $stmt->execute([$id]);
+    $projet = $stmt->fetch();
+    
+} catch(PDOException $e) {
+    echo "Erreur : " . $e->getMessage();
+}
+?&gt;
+            </pre>
+        </div>
+
+        <a href="../index.html" style="display: inline-block; margin-top: 20px; color: #3498db; text-decoration: none;">← Retour au portfolio</a>
+    </main>
+</body>
+</html>

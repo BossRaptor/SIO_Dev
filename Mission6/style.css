@@ -1,0 +1,247 @@
+/* Waël El Harti - BTS SIO 1ère année */
+
+:root {
+    /* Thème sombre bleu/noir – accents bleus façon "hacker" */
+    --bg: #0b1222;
+    --panel: #0f1a2b;
+    --text: #e6f1ff;
+    --muted: #9aa4b2;
+    --accent: #3498db; /* cohérent avec hub.css */
+    --accent-strong: #60a5fa; /* lueur/focus */
+    --border: rgba(96,165,250,.25);
+    --shadow: rgba(0, 140, 255, .25);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Consolas, "Courier New", ui-monospace, SFMono-Regular, Menlo, Monaco, monospace;
+    line-height: 1.6;
+    background-color: var(--bg);
+    color: var(--text);
+    
+}
+
+/* Header */
+header {
+    color: var(--text);
+    text-align: center;
+    padding: 1rem;
+    background: linear-gradient(90deg, #0b1222 0%, #0f1a2b 50%, #0b1222 100%);
+    border-bottom: 1px solid var(--border);
+}
+
+/* Menu principal */
+.menu-principal {
+    background-color: transparent;
+    position: relative;
+}
+
+/* Me permet de masquer les checkbox masquer les checkboxes */
+.menu,
+.menu-checkbox {
+    display: none;
+}
+
+/* Label du sous menu */
+.menu-label {
+    display: none;
+    background-color: #111827;
+    color: var(--accent);
+    padding: 15px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid var(--border);
+}
+
+/* Liste principale */
+.liste {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+
+}
+
+
+.element {
+    position: relative;
+    display: inline-block;
+    list-style: none;
+    border-left: 1px solid var(--border);
+
+}
+
+/* Liens du menu principal */
+.menu-lien {
+    display: block;
+    padding: 15px 20px;
+    color: var(--text);
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+
+.menu-lien:hover {
+    background-color: #111827;
+    border-bottom: 3px solid var(--accent);
+    transform: translateY(-2px);
+    box-shadow: 0 0 14px var(--shadow);
+}
+
+
+.sous-menu {
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    background-color: #0f172a;
+    min-width: 200px;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.35);
+    border: 1px solid var(--border);
+
+}
+
+/* Affichage des sous-menus au hover */
+.element:hover .sous-menu {
+    visibility: visible;
+    transform: translateY(5px);
+}
+
+
+/* Style du label quand checkbox cochée */
+.menu-checkbox:checked + .menu-lien {
+    background-color: #111827;
+    border-bottom: 3px solid var(--accent);
+}
+
+
+.sous-menu li a {
+    display: block;
+    padding: 12px 20px;
+    color: var(--text);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255,255,255,.06);
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+
+
+/* Effet hover sur les sous-menus */
+.sous-menu li a:hover {
+    background-color: rgba(96,165,250,.18);
+    color: var(--text);
+    font-weight: 600;
+    transform: translateX(4px);
+    padding-left: 24px;
+}
+
+
+/* Style du contenu principal */
+.contenu {
+    padding: 2rem;
+    width: 1200px;
+    margin-top: 150px;
+    margin-left: 200px ;
+    background-color: var(--panel);
+    color: var(--text);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    box-shadow: 0 8px 24px rgba(0,0,0,.35), 0 0 0 2px rgba(96,165,250,.06) inset;
+}
+
+.contenu h2 {
+    color: var(--accent-strong);
+    margin-bottom: 1rem;
+}
+
+
+
+/* Style pour les liens actifs */
+.menu-lien:active,
+.sous-menu li a:active {
+    background-color: rgba(96,165,250,.2);
+}
+
+
+/* Effet de focus pour l'accessibilité */
+.menu-lien:focus,
+.sous-menu li a:focus {
+    outline: 2px solid var(--accent-strong);
+    outline-offset: 2px;
+}
+
+/* Media Queries - Responsive pour écrans < 680px */
+@media screen and (max-width: 680px) {
+    .menu-label {
+        display: block;
+    }
+    
+    .liste {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #0f172a;
+        border-top: 1px solid var(--border);
+    }
+    
+    .menu:checked + .menu-label + .liste {
+        display: flex;
+    }
+    
+    .element {
+        width: 100%;
+        border-left: none;
+        border-bottom: 1px solid rgba(255,255,255,.06);
+    }
+    
+    .menu-lien {
+        text-align: left;
+        padding: 15px;
+        border-bottom: none;
+    }
+    
+    .menu-lien:hover {
+        transform: none;
+        box-shadow: none;
+    }
+    
+    .sous-menu {
+        position: static;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        background-color: #111827;
+        display: none;
+        border: 1px solid transparent;
+    }
+    
+    .menu-checkbox:checked + .menu-lien + .sous-menu {
+        display: block;
+    }
+    
+    .contenu {
+        width: 95%;
+        margin: 20px auto;
+        margin-top: 20px;
+    }
+    
+    /* Style spécifique pour mobile */
+    .element:hover .sous-menu {
+        visibility: hidden;
+        display: none;
+    }
+}
+
