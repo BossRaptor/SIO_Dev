@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facture TP14</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="tp14.js"></script>
+</head>
+<body>
+    <div class="conteneur-facture">
+        <div class="entete">
+            <div class="logo">
+                <img src="AppleLogo.svg" alt="Logo Apple">
+            </div>
+            <div class="info-facture">
+                <p>Date création : 07/11/25</p>
+                <p>N° Facture : 3254173626557</p>
+            </div>
+        </div>
+
+        <div class="adresses">
+            <div class="bloc-adresse">
+                <h3>Destinataire</h3>
+                <input type="text" id="destinataire_nom" placeholder="Nom">
+                <input type="text" id="destinataire_societe" placeholder="Nom de la société">
+                <input type="text" id="destinataire_adresse" placeholder="Adresse Postale">
+                <input type="text" id="destinataire_telephone" placeholder="Téléphone">
+                <input type="text" id="destinataire_email" placeholder="Email">
+            </div>
+            <div class="bloc-adresse">
+                <h3>Envoyé à</h3>
+                <input type="text" id="expediteur_nom" placeholder="Nom">
+                <input type="text" id="expediteur_societe" placeholder="Nom de la société">
+                <input type="text" id="expediteur_adresse" placeholder="Adresse Postale">
+                <input type="text" id="expediteur_telephone" placeholder="Téléphone">
+                <input type="text" id="expediteur_email" placeholder="Email">
+            </div>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Article :</th>
+                    <th>Quantité :</th>
+                    <th>Prix :</th>
+                    <th>Résultat :</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="text" id="article1" value="#1"></td>
+                    <td><input type="number" id="quantite1" value=null></td>
+                    <td><input type="number" id="prix1" value=null></td>
+                    <td><input type="number" id="resultat1" value=null readonly></td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="article2" value="#2"></td>
+                    <td><input type="number" id="quantite2" value=null></td>
+                    <td><input type="number" id="prix2" value=null></td>
+                    <td><input type="number" id="resultat2" value=null readonly></td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="article3" value="#3"></td>
+                    <td><input type="number" id="quantite3" value=null></td>
+                    <td><input type="number" id="prix3" value=null></td>
+                    <td><input type="number" id="resultat3" value=null readonly></td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr class="ligne-total">
+                    <td colspan="3">Total</td>
+                    <td><input type="number" id="total" value=null readonly></td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <div class="boutons">
+            <button onclick="reinitialiser()">réinitialiser</button>
+            <button onclick="calculer()">calculer</button>
+            <button onclick="imprimer()">imprimer</button>
+        </div>
+    </div>
+    <nav>
+        <a href="../index.html">Retour au menu des TP</a>
+    </nav>
+</body>
+</html>
