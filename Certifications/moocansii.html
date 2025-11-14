@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<title>MOOC ANSSI – Synthèse & Certification</title>
+	<meta name="description" content="Page d'hébergement de la future certification ANSSI et synthèse des sections du MOOC cybersécurité." />
+	<style>
+		:root { color-scheme: light dark; }
+		body { margin:0; font-family: system-ui, Arial, sans-serif; line-height:1.4; padding:24px; max-width:1100px; margin-inline:auto; }
+		h1 { margin:0 0 16px; font-size:clamp(26px,4vw,36px); }
+		h2 { margin:32px 0 12px; font-size:20px; }
+		h3 { margin:22px 0 8px; font-size:16px; }
+		p, li { font-size:14px; }
+		iframe { width:100%; height:480px; border:1px solid #999; border-radius:8px; background:#f8f8f8; }
+		.placeholder { display:flex; align-items:center; justify-content:center; height:100%; color:#666; font-style:italic; }
+		nav { display:flex; flex-wrap:wrap; gap:6px; margin:0 0 24px; }
+		nav a { padding:6px 10px; border:1px solid currentColor; border-radius:6px; text-decoration:none; font-size:13px; }
+		section { margin-bottom:28px; }
+		ul { margin:8px 0 16px; padding-left:20px; }
+		.grid { display:grid; gap:16px; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); }
+		.card { border:1px solid #ccc; border-radius:8px; padding:12px 14px; background:#fafafa; }
+		@media (prefers-color-scheme: dark){ body { background:#111; color:#ddd; } iframe { background:#222; } .card{ background:#1b1b1b; border-color:#333;} }
+	</style>
+	<script>
+		// Vérifie si le PDF est chargeable; s'il échoue on affiche le message interne.
+		function verifierPDF(){
+			const frame = document.getElementById('certFrame');
+			frame.addEventListener('error', () => { document.getElementById('noPdfMsg').hidden = false; });
+			// Astuce: on tente un fetch léger pour décider d'afficher le message si 404.
+			fetch(frame.src, { method:'HEAD' }).then(r => { if(!r.ok) document.getElementById('noPdfMsg').hidden = false; }).catch(()=>{ document.getElementById('noPdfMsg').hidden = false; });
+		}
+		document.addEventListener('DOMContentLoaded', verifierPDF);
+	</script>
+</head>
+<body>
+	<h1>MOOC ANSSI – Synthèse & Future Certification</h1>
+	<p>Cette page contiendra mon attestation officielle (iframe) dès obtention, suivie d'un compte rendu détaillé des modules du MOOC de l'ANSSI.</p>
+	<nav aria-label="Sommaire rapide">
+		<a href="#certification">Certification</a>
+		<a href="#introduction">Intro</a>
+		<a href="#menaces">Menaces</a>
+		<a href="#authentification">Authentification</a>
+		<a href="#crypto">Cryptographie</a>
+		<a href="#reseaux">Réseaux</a>
+		<a href="#poste">Poste</a>
+		<a href="#mobile">Mobile</a>
+		<a href="#web">Web</a>
+		<a href="#donnees">Sauvegarde</a>
+		<a href="#rgpd">RGPD</a>
+		<a href="#sensibilisation">Sensibilisation</a>
+		<a href="#incident">Incident</a>
+		<a href="#gouvernance">Gouvernance</a>
+	</nav>
+
+	<section id="certification">
+		<h2>Certification ANSSI (à venir)</h2>
+		<iframe id="certFrame" src="certification-anssi.pdf" title="Certification ANSSI">
+			<div class="placeholder">Chargement iframe…</div>
+		</iframe>
+		<p id="noPdfMsg" hidden style="margin-top:10px; font-size:13px; color:#666;">Le PDF n'est pas encore disponible. Quand je l'aurai obtenu, je placerai le fichier <code>certification-anssi.pdf</code> dans ce dossier pour qu'il s'affiche automatiquement ici.</p>
+	</section>
+
+	<section id="introduction">
+		<h2>1. Introduction à la cybersécurité</h2>
+		<p>Vision globale : enjeux économiques, légaux et sociétaux; rôle de l'ANSSI dans la protection des systèmes d'information critiques.</p>
+		<ul>
+			<li>Surface d'attaque croissante (cloud, IoT, mobilité).</li>
+			<li>Triptyque <strong>Confidentialité / Intégrité / Disponibilité</strong>.</li>
+			<li>Importance de la sensibilisation humaine.</li>
+		</ul>
+	</section>
+
+	<section id="menaces">
+		<h2>2. Panorama des menaces</h2>
+		<p>Typologie : malware, ransomware, phishing, ingénierie sociale, APT, DDoS.</p>
+		<ul>
+			<li>Chaîne d'attaque : reconnaissance → intrusion → persistance → exfiltration.</li>
+			<li>Vecteurs principaux : e‑mail, web, USB, vulnérabilités non corrigées.</li>
+			<li>Motivation : Gain financier, espionnage, sabotage, activisme.</li>
+		</ul>
+	</section>
+
+	<section id="authentification">
+		<h2>3. Authentification & gestion des identités</h2>
+		<ul>
+			<li>Mots de passe robustes (longueur, diversité, stockage haché + sel).</li>
+			<li>MFA (TOTP, U2F, biométrie) pour réduire l'impact des compromissions.</li>
+			<li>Principe du moindre privilège & revue régulière des comptes.</li>
+		</ul>
+	</section>
+
+	<section id="crypto">
+		<h2>4. Cryptographie</h2>
+		<p>Bases : algorithmes symétriques (AES), asymétriques (RSA/EC), hachage (SHA‑256), signatures.</p>
+		<ul>
+			<li>PKI & certificats (TLS, chaîne de confiance).</li>
+			<li>Chiffrement en transit (HTTPS) et au repos (disques chiffrés).</li>
+			<li>Gestion des clés (rotation, coffre-fort, séparation des rôles).</li>
+		</ul>
+	</section>
+
+	<section id="reseaux">
+		<h2>5. Sécurité réseau</h2>
+		<ul>
+			<li>Segmentation (VLAN / zones) pour limiter mouvements latéraux.</li>
+			<li>Pare-feu, IDS/IPS, filtrage DNS, proxy.</li>
+			<li>VPN et chiffrement des flux inter-sites.</li>
+			<li>Durcissement protocoles (SSH, TLS, désactivation versions faibles).</li>
+		</ul>
+	</section>
+
+	<section id="poste">
+		<h2>6. Sécurité du poste de travail</h2>
+		<ul>
+			<li>Mises à jour & correctifs (OS, logiciels).</li>
+			<li>Anti-malware / EDR, contrôle des périphériques USB.</li>
+			<li>Principe de durcissement : services minimaux, chiffrement disque.</li>
+			<li>Politique de verrouillage de session & gestion des droits locaux.</li>
+		</ul>
+	</section>
+
+	<section id="mobile">
+		<h2>7. Écosystème mobile & BYOD</h2>
+		<ul>
+			<li>MDM / MAM pour séparer données pro/perso.</li>
+			<li>Risques : applications malveillantes, réseaux Wi‑Fi publics.</li>
+			<li>Chiffrement natif + effacement à distance en cas de perte.</li>
+		</ul>
+	</section>
+
+	<section id="web">
+		<h2>8. Sécurité applicative & Web</h2>
+		<ul>
+			<li>Top vulnérabilités (OWASP) : injection, XSS, CSRF, IDOR.</li>
+			<li>CicD sécurisé : scans de dépendances, SAST/DAST.</li>
+			<li>Gestion des sessions (cookies sécurisés, expiration, SameSite).</li>
+		</ul>
+	</section>
+
+	<section id="donnees">
+		<h2>9. Sauvegarde & résilience</h2>
+		<ul>
+			<li>Stratégie 3‑2‑1 (3 copies, 2 supports, 1 hors site).</li>
+			<li>Tests de restauration réguliers.</li>
+			<li>Protection contre ransomware : immutabilité, détection comportementale.</li>
+		</ul>
+	</section>
+
+	<section id="rgpd">
+		<h2>10. Conformité & RGPD</h2>
+		<ul>
+			<li>Licéité, minimisation, finalité, durée de conservation.</li>
+			<li>Droits des personnes (accès, rectification, effacement).</li>
+			<li>Registre des traitements & DPIA pour risques élevés.</li>
+		</ul>
+	</section>
+
+	<section id="sensibilisation">
+		<h2>11. Sensibilisation & facteur humain</h2>
+		<ul>
+			<li>Formations régulières (phishing simulé, ateliers).</li>
+			<li>Culture de signalement sans culpabilisation.</li>
+			<li>Charte informatique claire & accessible.</li>
+		</ul>
+	</section>
+
+	<section id="incident">
+		<h2>12. Réponse à incident</h2>
+		<ul>
+			<li>Plan d'intervention : rôles, escalade, communication.</li>
+			<li>Journalisation centralisée & corrélation (SIEM).</li>
+			<li>Post‑mortem, leçons apprises & amélioration continue.</li>
+		</ul>
+	</section>
+
+	<section id="gouvernance">
+		<h2>13. Gouvernance & gestion des risques</h2>
+		<ul>
+			<li>Analyse risques (actifs, menaces, impacts, probabilités).</li>
+			<li>Politiques & normes internes alignées sur référentiels (ISO 27001).</li>
+			<li>Cycle PDCA (Plan-Do-Check-Act) pour amélioration.</li>
+		</ul>
+	</section>
+
+	<section>
+		<h2>Synthèse finale</h2>
+		<p>Le MOOC structure l'acquisition de réflexes : classification des actifs, réduction proactive de surface d'attaque, défense en profondeur, gestion des identités, chiffrement systématique, journalisation riche et entraînement continu des équipes. L'objectif est d'atteindre une posture résiliente capable de détecter tôt, contenir rapidement et récupérer efficacement.</p>
+	</section>
+
+</body>
+</html>
