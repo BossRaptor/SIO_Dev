@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau Dynamique</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="tableau.css">
+</head>
+<body>
+    <h2>Tableau Dynamique</h2>
+    Prénom: <br>
+    <input type="text" id="prenom" placeholder="Prénom"> <br>
+    Nom: <br>
+    <input type="text" id="nom" placeholder="Nom"> <br>
+    Age: <br>
+    <input type="number" id="age" placeholder="Age"> <br>
+    <br>
+    <br>
+
+    <table id="tableau">
+        <tr>
+            <th>Prénom</th>
+            <th>Nom</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>Paul</td>
+            <td>John</td>
+            <td>30</td>
+        </tr>
+        <tr>
+            <td>Marie</td>
+            <td>Jane</td>
+            <td>25</td>
+        </tr>
+    </table>
+
+    <button class="buttonAdd" onclick="ajouterLigne()">Ajouter une ligne</button>
+
+    <script>
+        function ajouterLigne() {
+            // Récupérer les valeurs des champs de saisie
+                var prenom = document.getElementById("prenom").value;
+                var nom = document.getElementById("nom").value;
+                var age = document.getElementById("age").value;
+
+            // Vérifier que les champs ne sont pas vides
+            if (nom === "" || age === "") {
+                alert("Veuillez remplir les deux champs avant d'ajouter une ligne.");
+            
+            }
+            else if (age < 10 || age > 20) {
+                alert("Veuillez entrer un âge valide entre 10 et 20.");
+            }
+            else {
+               var table = document.getElementById("tableau");
+               var newRow = table.insertRow(-1); // Ajouter une nouvelle ligne à la fin du tableau
+               var cell1 = newRow.insertCell(0); // Prénom
+               var cell2 = newRow.insertCell(1); // Nom
+               var cell3 = newRow.insertCell(2); // Age
+               cell1.innerHTML = prenom;
+               cell2.innerHTML = nom;
+               cell3.innerHTML = age;
+            }
+        }
+
+    </script>
+    
+</body>
+</html>
