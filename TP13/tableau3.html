@@ -19,11 +19,13 @@
     <br>
 
     <table id="tableau">
+        <thead>
         <tr>
             <th>Prénom</th>
             <th>Nom</th>
             <th>Age</th>
         </tr>
+        </thead>
         <tr>
             <td>Paul</td>
             <td>John</td>
@@ -37,6 +39,7 @@
     </table>
 
     <button class="buttonAdd" onclick="ajouterLigne()">Ajouter une ligne</button>
+    <button class="buttonDel" onclick="supprimerDerniereLigne()">Supprimer dernière ligne</button>
 
     <script>
         function ajouterLigne() {
@@ -46,9 +49,8 @@
                 var age = document.getElementById("age").value;
 
             // Vérifier que les champs ne sont pas vides
-            if (nom === "" || age === "") {
-                alert("Veuillez remplir les deux champs avant d'ajouter une ligne.");
-            
+            if (prenom === "" || nom === "" || age === "") {
+                alert("Veuillez remplir tous les champs avant d'ajouter une ligne.");
             }
             else if (age < 10 || age > 20) {
                 alert("Veuillez entrer un âge valide entre 10 et 20.");
@@ -64,6 +66,17 @@
                cell3.innerHTML = age;
             }
         }
+
+            function supprimerDerniereLigne() {
+                var table = document.getElementById('tableau');
+                // number of rows inside table (including thead if present)
+                var rows = table.getElementsByTagName('tr');
+                if (rows.length <= 2) { // header + at least one data row
+                    alert('Il n\'y a plus de lignes à supprimer.');
+                    return;
+                }
+                table.deleteRow(rows.length - 1);
+            }
 
     </script>
     

@@ -1,0 +1,12 @@
+/* Simple, generic table styles with light colors and outer border */
+table { width: 100%; border-collapse: collapse; margin-top: 12px; }
+table th, table td { padding: 8px; text-align: left; }
+table { border: 1px solid #ddd; } /* outer contour */
+thead th { background: #f4f4f4; color: #222; font-weight: 600; }
+tbody tr:nth-child(even) { background: #fafafa; }
+
+/* Buttons */
+.buttonAdd, .buttonDel { padding: 8px 12px; border-radius: 4px; border: 0; cursor: pointer; }
+.buttonAdd { background: #2ecc71; color: #fff; }
+.buttonDel { background: #e74c3c; color: #fff; margin-left: 8px; }
+
