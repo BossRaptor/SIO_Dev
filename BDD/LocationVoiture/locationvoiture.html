@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>BDD Location de Voitures</title>
+	<style>
+		:root { color-scheme: light dark; }
+		body { font-family: system-ui, Arial, sans-serif; margin: 0; padding: 24px; display: grid; place-items: center; }
+		main { max-width: 720px; text-align: center; }
+		h1 { font-size: clamp(22px, 4vw, 32px); margin: 0 0 12px; }
+		p { margin: 8px 0 16px; }
+		ul { list-style: none; padding: 0; margin: 8px 0 20px; display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
+		li { padding: 6px 10px; border: 1px solid #bbb; border-radius: 6px; font-size: 14px; }
+		a.button { display: inline-block; padding: 10px 14px; border: 1px solid currentColor; border-radius: 8px; text-decoration: none; }
+	</style>
+	<meta name="description" content="Présentation ultra-minimale de la base de données d'une agence de location (tables et lien direct vers le SQL)." />
+</head>
+<body>
+	<main>
+		<h1>Base de données — Agence de location</h1>
+		<p>Présentation ultra‑rapide: 5 tables relationnelles.</p>
+		<ul>
+			<li>categories</li>
+			<li>clients</li>
+			<li>employes</li>
+			<li>voitures</li>
+			<li>locations</li>
+		</ul>
+		<p>
+			<a class="button" href="agence_location_bdd.sql">Voir la base (SQL)</a>
+		</p>
+	</main>
+</body>
+</html>
