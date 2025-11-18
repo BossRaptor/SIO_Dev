@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<title>MOOC EBIOS – Synthèse & Certification</title>
+	<meta name="description" content="Page d'hébergement de la certification EBIOS et synthèse du MOOC gestion des risques." />
+	<link rel="stylesheet" href="mooc.css" />
+	<script>
+		function verifierPDF(){
+			const frame = document.getElementById('certFrame');
+			frame.addEventListener('error', () => { document.getElementById('noPdfMsg').hidden = false; });
+			fetch(frame.src, { method:'HEAD' }).then(r => { if(!r.ok) document.getElementById('noPdfMsg').hidden = false; }).catch(()=>{ document.getElementById('noPdfMsg').hidden = false; });
+		}
+		document.addEventListener('DOMContentLoaded', verifierPDF);
+	</script>
+</head>
+<body>
+	<h1>MOOC EBIOS – Synthèse & Certification</h1>
+	<p>Cette page contient mon attestation officielle du MOOC EBIOS (iframe) et un compte rendu détaillé des modules.</p>
+
+	<section id="certification">
+		<h2>Certification EBIOS</h2>
+		<iframe id="certFrame" src="Certificat - El Harti Waël - 17_11_2025.pdf" title="Certification EBIOS">
+			<div class="placeholder">Chargement iframe…</div>
+		</iframe>
+		<p id="noPdfMsg" hidden style="margin-top:10px; font-size:13px; color:#666;">Le PDF n'est pas encore disponible. Placez le fichier de certification dans ce dossier pour qu'il s'affiche automatiquement ici.</p>
+	</section>
+
+	<section id="introduction">
+		<h2>1. Introduction à EBIOS Risk Manager</h2>
+		<p>EBIOS Risk Manager est une méthode d'analyse et de gestion des risques SSI développée par l'ANSSI, compatible avec ISO 27005.</p>
+		<ul>
+			<li>Approche par scénarios de risque et cartographie.</li>
+			<li>Vision globale : parties prenantes, valeurs métier, menaces.</li>
+			<li>Cinq ateliers structurés pour couvrir tout le cycle de gestion du risque.</li>
+		</ul>
+	</section>
+
+	<nav>
+		<a href="../index.html">Retour au menu des TP</a>
+	</nav>
+</body>
+</html>
