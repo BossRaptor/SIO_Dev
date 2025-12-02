@@ -1,0 +1,94 @@
+<!-- Nom : Waël El Harti -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz BTS SIO</title>
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+    <h1>Quiz BTS SIO</h1>
+    <form id="quizForm">
+        <div class="question">
+            <p>1. Que signifie SIO ?</p>
+            <label><input type="radio" name="q1" value="a"> Services Informatiques aux Organisations</label>
+            <label><input type="radio" name="q1" value="b"> Systèmes Informatiques Optimisés</label>
+            <label><input type="radio" name="q1" value="c"> Sécurité Informatique Organisée</label>
+        </div>
+
+        <div class="question">
+            <p>2. Combien y a-t-il d'options en BTS SIO ?</p>
+            <label><input type="radio" name="q2" value="a"> Une</label>
+            <label><input type="radio" name="q2" value="b"> Deux</label>
+            <label><input type="radio" name="q2" value="c"> Trois</label>
+        </div>
+
+        <div class="question">
+            <p>3. Que signifie SLAM ?</p>
+            <label><input type="radio" name="q3" value="a"> Solutions Logicielles et Applications Métiers</label>
+            <label><input type="radio" name="q3" value="b"> Systèmes Linux et Maintenance</label>
+            <label><input type="radio" name="q3" value="c"> Sécurité Logicielle Avancée</label>
+        </div>
+
+        <div class="question">
+            <p>4. Que signifie SISR ?</p>
+            <label><input type="radio" name="q4" value="a"> Systèmes Informatiques et Serveurs Réseau</label>
+            <label><input type="radio" name="q4" value="b"> Solutions d'Infrastructure, Systèmes et Réseaux</label>
+            <label><input type="radio" name="q4" value="c"> Sécurité Informatique des Systèmes et Réseaux</label>
+        </div>
+
+        <div class="question">
+            <p>5. Quelle est la durée du BTS SIO ? (plusieurs réponses possibles)</p>
+            <label><input type="checkbox" name="q5" value="a"> 2 ans</label>
+            <label><input type="checkbox" name="q5" value="b"> 3 ans</label>
+            <label><input type="checkbox" name="q5" value="c"> En alternance</label>
+        </div>
+
+        <div class="question">
+            <p>6. HTML signifie :</p>
+            <label><input type="radio" name="q6" value="a"> HyperText Markup Language</label>
+            <label><input type="radio" name="q6" value="b"> HyperText Modern Language</label>
+            <label><input type="radio" name="q6" value="c"> HighTech Markup Language</label>
+        </div>
+
+        <div class="question">
+            <p>7. Quel langage est utilisé pour styliser une page web ?</p>
+            <label><input type="radio" name="q7" value="a"> JavaScript</label>
+            <label><input type="radio" name="q7" value="b"> CSS</label>
+            <label><input type="radio" name="q7" value="c"> Python</label>
+        </div>
+
+        <div class="question">
+            <p>8. Quels sont des langages de programmation ? (plusieurs réponses possibles)</p>
+            <label><input type="checkbox" name="q8" value="a"> Python</label>
+            <label><input type="checkbox" name="q8" value="b"> JavaScript</label>
+            <label><input type="checkbox" name="q8" value="c"> HTML</label>
+        </div>
+
+        <div class="question">
+            <p>9. Quel est le rôle d'une base de données ?</p>
+            <label><input type="radio" name="q9" value="a"> Stocker et organiser des données</label>
+            <label><input type="radio" name="q9" value="b"> Créer des sites web</label>
+            <label><input type="radio" name="q9" value="c"> Gérer des réseaux</label>
+        </div>
+
+        <div class="question">
+            <p>10. SQL signifie :</p>
+            <label><input type="radio" name="q10" value="a"> Structured Query Language</label>
+            <label><input type="radio" name="q10" value="b"> Simple Question Language</label>
+            <label><input type="radio" name="q10" value="c"> Server Query Language</label>
+        </div>
+    </form>
+
+    <div class="buttons">
+        <button id="correction" onclick="testqcm()">Correction</button>
+        <button id="corrige" onclick="afficherCorrige()">Corrigé</button>
+        <button id="effacer" onclick="effacer()">Effacer</button>
+    </div>
+
+    <div id="score"></div>
+
+    <script src="quiz.js"></script>
+</body>
+</html>
