@@ -1,0 +1,161 @@
+/* Feuille de style commune pour toutes les pages BDD et Mission 10 */
+
+:root {
+	color-scheme: light dark;
+}
+
+body {
+	font-family: system-ui, Arial, sans-serif;
+	margin: 0;
+	padding: 24px;
+}
+
+/* Layout pour pages BDD (centré) */
+body.centered {
+	display: grid;
+	place-items: center;
+}
+
+/* Layout pour Mission 10 (procédure) */
+body.procedure main {
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+main {
+	max-width: 720px;
+}
+
+/* Centrage du contenu pour les pages BDD */
+.centered main {
+	text-align: center;
+}
+
+/* Typographie */
+h1 {
+	font-size: clamp(22px, 4vw, 32px);
+	margin: 0 0 12px;
+}
+
+h2 {
+	font-size: 20px;
+	margin: 24px 0 12px;
+}
+
+h3 {
+	font-size: 18px;
+	margin: 18px 0 10px;
+}
+
+h4 {
+	font-size: 16px;
+	margin: 14px 0 8px;
+}
+
+p {
+	margin: 8px 0 16px;
+	line-height: 1.6;
+}
+
+/* Listes */
+ul {
+	margin: 8px 0 16px;
+	padding-left: 20px;
+}
+
+li {
+	margin: 6px 0;
+}
+
+/* Listes de tables BDD (sans puces, en ligne) */
+ul.table-list {
+	list-style: none;
+	padding: 0;
+	margin: 8px 0 20px;
+	display: flex;
+	gap: 8px;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+ul.table-list li {
+	padding: 6px 10px;
+	border: 1px solid #bbb;
+	border-radius: 6px;
+	font-size: 14px;
+}
+
+/* Code inline et blocs */
+code {
+	background: #303030;
+	padding: 2px 6px;
+	border-radius: 3px;
+	font-family: monospace;
+}
+
+pre {
+	background: #303030;
+	padding: 12px;
+	border-radius: 5px;
+	overflow-x: auto;
+	margin: 10px 0;
+}
+
+pre code {
+	background: transparent;
+	padding: 0;
+}
+
+strong {
+	font-weight: bold;
+}
+
+/* Boutons */
+a.button {
+	display: inline-block;
+	padding: 10px 14px;
+	border: 1px solid currentColor;
+	border-radius: 8px;
+	text-decoration: none;
+	margin-top: 12px;
+}
+
+a.button:hover {
+	background: rgba(0, 0, 0, 0.05);
+}
+
+/* Navigation */
+nav {
+	margin-top: 40px;
+	text-align: center;
+}
+
+/* Iframes (PDF) */
+iframe {
+	width: 100%;
+	height: 70vh;
+	border: 1px solid #bbb;
+	border-radius: 8px;
+}
+
+/* Images */
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+/* Placeholders pour screenshots */
+.placeholder {
+	background: #e8e8e8;
+	padding: 40px;
+	border-radius: 5px;
+	text-align: center;
+	color: #666;
+	margin: 20px 0;
+}
+
+/* Sections avec bordure */
+.section-separator {
+	border-top: 1px solid #ddd;
+	padding-top: 20px;
+}

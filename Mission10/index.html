@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Mission 10 - Procédure BDD Cinéma</title>
+	<link rel="stylesheet" href="../BDD/bdd.css" />
+	<meta name="description" content="Mission 10 - Procédure de création de la base de données Cinéma." />
+</head>
+<body class="procedure">
+	<main>
+		<h1>Mission 10 - Création de la Base de Données "Cinéma"</h1>
+
+		<p style="margin: 20px 0;">
+			<a class="button" href="cinema_bdd.sql">Voir la base (SQL)</a>
+		</p>
+
+		<h2>Énoncé du TP</h2>
+		<iframe src="Mission_10.pdf" title="Énoncé Mission 10"></iframe>
+		<p style="margin-top: 8px;">
+			<a class="button" href="Mission_10.pdf" target="_blank" rel="noopener">Ouvrir dans un nouvel onglet</a>
+		</p>
+
+		<h2 class="section-separator">Procédure</h2>
+
+		<h3>1. Contexte de la mission</h3>
+		<p>En tant que stagiaire à la DSI de l'entreprise UGC, j'ai été chargé de concevoir une première ébauche de base de données pour la refonte du site web. L'objectif était de structurer les données des films, acteurs et réalisateurs pour répondre aux besoins précis du service marketing (mise en valeur des films récents, casting, etc.).</p>
+
+		<h3>2. Conception et Structure de la Base de Données</h3>
+
+		<h4>Analyse et correction de la redondance</h4>
+		<p>Lors de l'analyse du besoin, j'ai identifié une erreur de conception dans la demande initiale : la table FILM contenait deux champs Genre1 et Genre2. Cela créait de la redondance et limitait chaque film à deux genres maximum.</p>
+		<p>Ma solution : J'ai supprimé ces colonnes de la table FILM et j'ai créé une table indépendante GENRE ainsi qu'une table d'association CLASSIFIER. Cela permet d'associer un nombre illimité de genres à un film sans redondance.</p>
+
+		<h4>Schéma Relationnel Final</h4>
+		<p>Voici la structure complète de la base de données avec les liens entre les tables (Clés primaires et étrangères) :</p>
+		<p style="text-align: center; margin: 20px 0;">
+			<img src="images/concepteur.png" alt="Schéma du concepteur de base de données" style="max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 5px;" />
+		</p>
+
+		<h4>Détail de la création d'une table (Exemple : Table FILM)</h4>
+		<p>Pour créer la table FILM, j'ai défini les types de données suivants : VARCHAR pour le titre et le distributeur, DATE pour la sortie, et INT pour la durée. J'ai également défini les clés étrangères pour faire le lien avec les tables PAYS et REALISATEUR.</p>
+		<p>Code SQL utilisé :</p>
+		<pre><code>CREATE TABLE FILM (
+    IDENT_FILM INT AUTO_INCREMENT PRIMARY KEY,
+    TITRE VARCHAR(100),
+    DATE_SORTIE DATE,
+    DUREE INT,
+    IDENT_PAYS INT,
+    IDENT_REALISATEUR INT,
+    FOREIGN KEY (IDENT_PAYS) REFERENCES PAYS(IDENT_PAYS),
+    FOREIGN KEY (IDENT_REALISATEUR) REFERENCES REALISATEUR(IDENT_REALISATEUR)
+);</code></pre>
+
+		<h3>3. Insertion des données</h3>
+		<p>J'ai inséré les données en respectant l'ordre logique pour satisfaire les contraintes d'intégrité (d'abord les tables de référence comme PAYS ou REALISATEUR, puis les tables liées comme FILM).</p>
+		<p>Exemple d'insertion (Table ACTEUR) :</p>
+		<pre><code>INSERT INTO ACTEUR (NOM, PRENOM, DATE_NAISSANCE, NB_FILM) 
+VALUES ('DURIS', 'Romain', '1974-05-28', 60);</code></pre>
+
+		<h3>4. Interrogation de la Base de Données</h3>
+		<p>Pour vérifier le bon fonctionnement de la base, j'ai réalisé plusieurs recherches.</p>
+
+		<h4>A. Recherches via l'interface graphique (QBE)</h4>
+		<p>Liste des films du genre "SF" :</p>
+		<p style="text-align: center; margin: 20px 0;">
+			<img src="images/FilmsSF.png" alt="Résultat requête films SF" style="max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 5px;" />
+		</p>
+
+		<p style="margin-top: 20px;">Réalisateurs nés dans les années 50 :</p>
+		<p style="text-align: center; margin: 20px 0;">
+			<img src="images/realisateursAno50.png" alt="Résultat requête réalisateurs années 50" style="max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 5px;" />
+		</p>
+
+		<h4>B. Recherches via le langage SQL (Bonus)</h4>
+		<p>Films de plus de 90mn sortis entre 2008 et 2012 :</p>
+		<p>Requête : SELECT TITRE... WHERE DUREE > 90 AND DATE_SORTIE BETWEEN '2008-01-01' AND '2012-12-31'</p>
+		<p style="text-align: center; margin: 20px 0;">
+			<img src="images/films90min2008-2012.png" alt="Résultat requête films 90min 2008-2012" style="max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 5px;" />
+		</p>
+
+		<p style="margin-top: 20px;">Ajout d'un nouveau film :</p>
+		<p>J'ai ajouté le film "Bienvenue chez les Ch'tis" en créant d'abord le réalisateur Dany Boon, puis en liant le film au genre "Comédie".</p>
+
+		<p style="margin-top: 40px;">
+			<a class="button" href="../../index.html">Retour au menu</a>
+		</p>
+	</main>
+</body>
+</html>
